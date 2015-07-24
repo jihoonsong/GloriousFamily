@@ -4,13 +4,14 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.*;
 import android.widget.ImageView;
+import android.content.Intent;
 
-public class LoginActivity extends FragmentActivity {
+public class SignupActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_signup);
     }
 
     public void onClick(View v) {
@@ -25,7 +26,7 @@ public class LoginActivity extends FragmentActivity {
                 // 값 입력받는 창
                 break;
             case R.id.button_login:
-                // 다음 엑티비티로
+                startActivity(new Intent(this, ProfileActivity.class));
                 break;
         }
     }
