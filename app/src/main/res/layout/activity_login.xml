@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent" tools:context=".MainActivity">
+
+    <ImageView
+        android:src="@drawable/background_signup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/button_facebook"
+        android:src="@drawable/button_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        android:clickable="true"
+        android:onClick="onClick" />
+
+    <ImageView
+        android:id="@+id/layer_facebook"
+        android:src="@drawable/layer_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/button_login"
+        android:src="@drawable/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:visibility="invisible"
+        android:clickable="true"
+        android:onClick="onClick" />
+
+</RelativeLayout>
