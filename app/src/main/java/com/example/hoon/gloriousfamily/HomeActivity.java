@@ -18,6 +18,15 @@ public class HomeActivity extends Activity {
 
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.button_profile:
+                startActivity(new Intent(this, ProfileActivity.class));
+                break;
+            case R.id.button_familytree:
+                //startActivity(new Intent(this, HomeActivity.class));
+                break;
+            case R.id.button_findyourmate:
+                //startActivity(new Intent(this, HomeActivity.class));
+                break;
         }
     }
 }
