@@ -7,26 +7,17 @@ import android.os.Bundle;
 import android.view.*;
 import android.widget.ImageView;
 
-public class HomeActivity extends Activity {
+public class MateSelectActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_mate_select);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.button_profile:
-                startActivity(new Intent(this, ProfileActivity.class));
-                break;
-            case R.id.button_familytree:
-                //startActivity(new Intent(this, HomeActivity.class));
-                break;
-            case R.id.button_findyourmate:
-                startActivity(new Intent(this, MateSelectActivity.class));
-                break;
         }
     }
 }

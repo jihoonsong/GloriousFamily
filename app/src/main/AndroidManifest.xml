@@ -20,6 +20,7 @@
         <activity android:name=".ProfileActivity" android:label="ProfileActivity" />
         <activity android:name=".CharacterSelectActivity" android:label="CharacterSelectActivity" />
         <activity android:name=".HomeActivity" android:label="HomeActivity" />
+        <activity android:name=".MateSelectActivity" android:label="MateSelectActivity" />
     </application>
 
 </manifest>
