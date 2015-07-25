@@ -14,4 +14,12 @@ public class CharacterSelectActivity extends FragmentActivity{
         setContentView(R.layout.activity_character_select);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
+
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button_yesitisme:
+                startActivity(new Intent(this, CharacterSelectActivity.class));
+                break;
+        }
+    }
 }

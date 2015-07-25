@@ -7,4 +7,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <ImageView
+        android:id="@+id/button_yesitisme"
+        android:src="@drawable/button_yesitisme"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:onClick="onClick" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_alignTop="@id/button_yesitisme"
+        android:layout_alignBottom="@id/button_yesitisme"
+        android:gravity="center"
+        android:text="Yes, It's Me!"
+        android:textColor="#ffffff"
+        android:textSize="15pt" />
+
+    <ImageView
+        android:id="@+id/character_color_red"
+        android:src="@drawable/character_color_red"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
