@@ -7,4 +7,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <ImageView
+        android:id="@+id/button_getstarted"
+        android:src="@drawable/button_getstarted"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:onClick="onClick" />
+
+    <TextView
+        android:id="@+id/myImageViewText"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_alignTop="@id/button_getstarted"
+        android:layout_alignBottom="@id/button_getstarted"
+        android:gravity="center"
+        android:text="Get Started!"
+        android:textColor="#ffffff"
+        android:textSize="15pt" />
+
 </RelativeLayout>
