@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".ProfileActivity" android:label="ProfileActivity" />
         <activity android:name=".CharacterSelectActivity" android:label="CharacterSelectActivity" />
+        <activity android:name=".HomeActivity" android:label="HomeActivity" />
     </application>
 
 </manifest>
