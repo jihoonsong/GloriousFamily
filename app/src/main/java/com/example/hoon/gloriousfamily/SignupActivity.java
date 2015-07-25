@@ -1,13 +1,13 @@
 package com.example.hoon.gloriousfamily;
 
-import android.support.v4.app.FragmentActivity;
+import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.*;
 import android.widget.ImageView;
 
-public class SignupActivity extends FragmentActivity {
+public class SignupActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
