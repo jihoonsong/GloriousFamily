@@ -21,6 +21,7 @@
         <activity android:name=".CharacterSelectActivity" android:label="CharacterSelectActivity" />
         <activity android:name=".HomeActivity" android:label="HomeActivity" />
         <activity android:name=".MateSelectActivity" android:label="MateSelectActivity" />
+        <activity android:name=".FamilyTreeActivity" android:label="FamilyTreeActivity" />
     </application>
 
 </manifest>

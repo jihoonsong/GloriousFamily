@@ -22,7 +22,7 @@ public class HomeActivity extends Activity {
                 startActivity(new Intent(this, ProfileActivity.class));
                 break;
             case R.id.button_familytree:
-                //startActivity(new Intent(this, HomeActivity.class));
+                startActivity(new Intent(this, FamilyTreeActivity.class));
                 break;
             case R.id.button_findyourmate:
                 startActivity(new Intent(this, MateSelectActivity.class));
