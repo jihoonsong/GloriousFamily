@@ -1,10 +1,11 @@
 package com.example.hoon.gloriousfamily;
 
 import android.support.v4.app.FragmentActivity;
+import android.content.pm.ActivityInfo;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.*;
 import android.widget.ImageView;
-import android.content.Intent;
 
 public class SignupActivity extends FragmentActivity {
 
@@ -12,6 +13,7 @@ public class SignupActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
     public void onClick(View v) {
