@@ -24,6 +24,7 @@
         <activity android:name=".FamilyTreeActivity" android:label="FamilyTreeActivity" />
         <activity android:name=".BirthActivity" android:label="BirthActivity" />
         <activity android:name=".DeathActivity" android:label="DeathActivity" />
+        <activity android:name=".DatingActivity" android:label="DatingActivity" />
     </application>
 
 </manifest>
