@@ -12,6 +12,8 @@ public class FamilyTreeActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Lock rotation.
         setContentView(R.layout.activity_family_tree);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
