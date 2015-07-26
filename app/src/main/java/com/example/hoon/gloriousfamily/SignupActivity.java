@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.*;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.graphics.Typeface;
 
 public class SignupActivity extends Activity {
 
@@ -14,6 +16,11 @@ public class SignupActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        TextView text_family = (TextView)findViewById(R.id.text_family);
+        text_family.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_LIGHT.ttf"));
+        TextView text_glorious = (TextView)findViewById(R.id.text_glorious);
+        text_glorious.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_LIGHT.ttf"));
     }
 
     public void onClick(View v) {
