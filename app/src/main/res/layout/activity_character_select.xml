@@ -82,8 +82,8 @@
             android:layout_weight="1" >
 
             <ImageView
-                android:id="@+id/character_status_one"
-                android:src="@drawable/character_status_one"
+                android:id="@+id/character_cloth_one"
+                android:src="@drawable/character_cloth_one"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent" />
 
