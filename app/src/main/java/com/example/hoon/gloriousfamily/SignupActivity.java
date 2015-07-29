@@ -23,9 +23,9 @@ public class SignupActivity extends Activity {
 
         // Set custom font.
         TextView text_family = (TextView)findViewById(R.id.text_family);
-        text_family.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_LIGHT.ttf"));
+        text_family.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
         TextView text_glorious = (TextView)findViewById(R.id.text_glorious);
-        text_glorious.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_LIGHT.ttf"));
+        text_glorious.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
     }
 
     public void onClick(View v) {
