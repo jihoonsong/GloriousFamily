@@ -8,7 +8,9 @@ import android.view.*;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.graphics.Typeface;
+import org.androidannotations.annotations.EActivity;
 
+@EActivity(R.layout.activity_signup)
 public class SignupActivity extends Activity {
 
     @Override
@@ -38,7 +40,7 @@ public class SignupActivity extends Activity {
                 // 값 입력받는 창
                 break;
             case R.id.button_login:
-                startActivity(new Intent(this, ProfileActivity.class));
+                //startActivity(new Intent(this, ProfileActivity.class));
                 break;
         }
     }

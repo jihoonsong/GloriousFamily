@@ -9,7 +9,7 @@
         android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
         android:screenOrientation="portrait" >
         <activity
-            android:name=".SignupActivity"
+            android:name=".SignupActivity_"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,14 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProfileActivity" android:label="ProfileActivity" />
-        <activity android:name=".CharacterSelectActivity" android:label="CharacterSelectActivity" />
-        <activity android:name=".HomeActivity" android:label="HomeActivity" />
-        <activity android:name=".MateSelectActivity" android:label="MateSelectActivity" />
-        <activity android:name=".FamilyTreeActivity" android:label="FamilyTreeActivity" />
-        <activity android:name=".BirthActivity" android:label="BirthActivity" />
-        <activity android:name=".DeathActivity" android:label="DeathActivity" />
-        <activity android:name=".DatingActivity" android:label="DatingActivity" />
+        <!--<activity android:name=".ProfileActivity_" android:label="ProfileActivity" />-->
+        <!--<activity android:name=".CharacterSelectActivity_" android:label="CharacterSelectActivity" />-->
+        <!--<activity android:name=".HomeActivity_" android:label="HomeActivity" />-->
+        <!--<activity android:name=".MateSelectActivity_" android:label="MateSelectActivity" />-->
+        <!--<activity android:name=".FamilyTreeActivity_" android:label="FamilyTreeActivity" />-->
+        <!--<activity android:name=".BirthActivity_" android:label="BirthActivity" />-->
+        <!--<activity android:name=".DeathActivity_" android:label="DeathActivity" />-->
+        <!--<activity android:name=".DatingActivity_" android:label="DatingActivity" />-->
     </application>
 
 </manifest>
