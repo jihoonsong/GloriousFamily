@@ -2,24 +2,17 @@ package com.example.hoon.gloriousfamily;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.*;
-import android.widget.ImageView;
 
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EActivity;
+
+@EActivity(R.layout.activity_death)
 public class DeathActivity extends Activity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
+    @AfterViews
+    protected void init() {
         // Lock rotation.
-        setContentView(R.layout.activity_death);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-    }
-
-    public void onClick(View v) {
-        switch (v.getId()) {
-        }
     }
 }

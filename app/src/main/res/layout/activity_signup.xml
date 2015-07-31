@@ -14,8 +14,7 @@ android:layout_height="match_parent" tools:context=".MainActivity">
         android:layout_height="77dp"
         android:layout_alignParentBottom="true"
         android:visibility="visible"
-        android:clickable="true"
-        android:onClick="onClick" />
+        android:clickable="true" />
 
     <ImageView
         android:id="@+id/layer_facebook"
@@ -33,28 +32,6 @@ android:layout_height="match_parent" tools:context=".MainActivity">
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:visibility="invisible"
-        android:clickable="true"
-        android:onClick="onClick" />
-
-    <TextView
-        android:id="@+id/text_family"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@id/layer_facebook"
-        android:layout_marginBottom="80dp"
-        android:text="FAMILY"
-        android:textColor="#ffffff"
-        android:textSize="15pt" />
-
-    <TextView
-        android:id="@+id/text_glorious"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@id/text_family"
-        android:text="GLORIOUS"
-        android:textColor="#ffffff"
-        android:textSize="15pt" />
+        android:clickable="true" />
 
 </RelativeLayout>

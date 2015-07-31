@@ -2,26 +2,24 @@ package com.example.hoon.gloriousfamily;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.*;
 import android.widget.ImageView;
 
-public class ProfileActivity extends Activity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.AfterViews;
 
+@EActivity(R.layout.activity_profile)
+public class ProfileActivity extends Activity {
+    @AfterViews
+    protected void init() {
         // Lock rotation.
-        setContentView(R.layout.activity_profile);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.button_getstarted:
-                startActivity(new Intent(this, CharacterSelectActivity.class));
-                break;
-        }
+    @Click(R.id.button_getstarted)
+    void buttonGetStartedClicked() {
+        CharacterSelectActivity_.intent(this).start();
     }
 }

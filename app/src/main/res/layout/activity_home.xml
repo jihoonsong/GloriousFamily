@@ -13,8 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="77dp"
         android:layout_alignParentBottom="true"
-        android:clickable="true"
-        android:onClick="onClick" />
+        android:clickable="true" />
 
     <TextView
         android:layout_width="match_parent"
@@ -42,8 +41,7 @@
         android:layout_above="@id/button_findyourmate"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="20dp"
-        android:clickable="true"
-        android:onClick="onClick"  />
+        android:clickable="true" />
 
     <ImageView
         android:id="@+id/button_familytree"
@@ -54,8 +52,7 @@
         android:layout_above="@id/button_findyourmate"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:clickable="true"
-        android:onClick="onClick"  />
+        android:clickable="true" />
 
     <ImageView
         android:id="@+id/layer_banner"
