@@ -21,5 +21,6 @@ public class ProfileActivity extends Activity {
     @Click(R.id.button_getstarted)
     void buttonGetStartedClicked() {
         CharacterSelectActivity_.intent(this).start();
+        finish();
     }
 }

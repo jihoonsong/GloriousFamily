@@ -20,5 +20,6 @@ public class CharacterSelectActivity extends Activity{
     @Click(R.id.button_yesitisme)
     void buttonYesItIsMeClicked() {
         HomeActivity_.intent(this).start();
+        finish();
     }
 }
