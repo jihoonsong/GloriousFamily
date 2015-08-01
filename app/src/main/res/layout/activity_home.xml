@@ -3,13 +3,12 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:src="@drawable/background_home_tent"
+        android:id="@+id/background_home_tent"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <ImageView
         android:id="@+id/button_findyourmate"
-        android:src="@drawable/button_findyourmate"
         android:layout_width="match_parent"
         android:layout_height="77dp"
         android:layout_alignParentBottom="true"
@@ -27,14 +26,12 @@
 
     <ImageView
         android:id="@+id/character_body_one"
-        android:src="@drawable/character_body_one"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true" />
 
     <ImageView
         android:id="@+id/button_profile"
-        android:src="@drawable/button_profile"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_alignParentLeft="true"
@@ -45,7 +42,6 @@
 
     <ImageView
         android:id="@+id/button_familytree"
-        android:src="@drawable/button_familytree"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_alignParentRight="true"
@@ -56,7 +52,6 @@
 
     <ImageView
         android:id="@+id/layer_banner"
-        android:src="@drawable/layer_banner"
         android:layout_width="300dp"
         android:layout_height="90dp"
         android:layout_centerHorizontal="true"

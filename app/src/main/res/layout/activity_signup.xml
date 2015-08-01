@@ -3,13 +3,12 @@ xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_paren
 android:layout_height="match_parent" tools:context=".MainActivity">
 
     <ImageView
-        android:src="@drawable/background_signup"
+        android:id="@+id/background_signup"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <ImageView
         android:id="@+id/button_facebook"
-        android:src="@drawable/button_facebook"
         android:layout_width="match_parent"
         android:layout_height="77dp"
         android:layout_alignParentBottom="true"
@@ -18,7 +17,6 @@ android:layout_height="match_parent" tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/layer_facebook"
-        android:src="@drawable/layer_facebook"
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:layout_alignParentBottom="true"
@@ -26,7 +24,6 @@ android:layout_height="match_parent" tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/button_login"
-        android:src="@drawable/button_login"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"

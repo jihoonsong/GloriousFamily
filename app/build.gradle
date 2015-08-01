@@ -28,6 +28,8 @@ dependencies {
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
 
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
     compile 'com.google.android.gms:play-services-fitness:7.5.0'
 }
 

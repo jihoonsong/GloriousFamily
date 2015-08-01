@@ -3,13 +3,12 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:src="@drawable/background_profile"
+        android:id="@+id/background_profile"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <ImageView
         android:id="@+id/button_getstarted"
-        android:src="@drawable/button_getstarted"
         android:layout_width="match_parent"
         android:layout_height="77dp"
         android:layout_alignParentBottom="true"
