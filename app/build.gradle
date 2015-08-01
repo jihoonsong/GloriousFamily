@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+def AAVersion = '3.3.2'
 
 android {
     compileSdkVersion 22
@@ -19,15 +21,14 @@ android {
     }
 }
 
-apply plugin: 'android-apt'
-def AAVersion = '3.3.2'
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
 
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
+
+    compile 'com.google.android.gms:play-services-fitness:7.5.0'
 }
 
 apt {
