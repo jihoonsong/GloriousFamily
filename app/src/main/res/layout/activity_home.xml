@@ -4,6 +4,7 @@
 
     <ImageView
         android:id="@+id/background_home_tent"
+        android:src="@drawable/background_home_tent_jpg"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

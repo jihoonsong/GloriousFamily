@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.*;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 
 import org.androidannotations.annotations.EActivity;
@@ -21,12 +22,12 @@ public class HomeActivity extends Activity {
     protected void init() {
         // Lock rotation.
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        Picasso.with(getApplicationContext()).load(R.drawable.background_home_tent).into(background_home_tent);
-        Picasso.with(getApplicationContext()).load(R.drawable.button_findyourmate).into(button_findyourmate);
-        Picasso.with(getApplicationContext()).load(R.drawable.character_body_one).into(character_body_one);
-        Picasso.with(getApplicationContext()).load(R.drawable.button_profile).into(button_profile);
-        Picasso.with(getApplicationContext()).load(R.drawable.button_familytree).into(button_familytree);
-        Picasso.with(getApplicationContext()).load(R.drawable.layer_banner).into(layer_banner);
+        //Glide.with(getApplicationContext()).load(R.drawable.background_home_tent).into(background_home_tent);
+        Glide.with(getApplicationContext()).load(R.drawable.button_findyourmate).into(button_findyourmate);
+        Glide.with(getApplicationContext()).load(R.drawable.character_body_one).into(character_body_one);
+        Glide.with(getApplicationContext()).load(R.drawable.button_profile).into(button_profile);
+        Glide.with(getApplicationContext()).load(R.drawable.button_familytree).into(button_familytree);
+        Glide.with(getApplicationContext()).load(R.drawable.layer_banner).into(layer_banner);
     }
 
     @Click(R.id.button_profile)

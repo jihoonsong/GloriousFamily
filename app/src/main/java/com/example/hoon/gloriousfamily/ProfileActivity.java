@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.*;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 
 import org.androidannotations.annotations.EActivity;
@@ -22,15 +23,17 @@ public class ProfileActivity extends Activity {
     protected void init() {
         // Lock rotation.
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        Picasso.with(getApplicationContext()).load(R.drawable.background_profile).into(background_profile);
-        Picasso.with(getApplicationContext()).load(R.drawable.button_getstarted).into(button_getstarted);
+        //Glide.with(getApplicationContext()).load(R.drawable.background_profile).into(background_profile);
+        Glide.with(getApplicationContext()).load(R.drawable.button_getstarted).into(button_getstarted);
     }
 
     @Click(R.id.button_getstarted)
     void buttonGetStartedClicked() {
         CharacterSelectActivity_.intent(this).start();
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         // TODO :
-        //finish();
+        finish();
+        System.gc();
         //onStop();
     }
 }
