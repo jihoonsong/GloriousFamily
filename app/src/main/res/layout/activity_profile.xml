@@ -4,7 +4,7 @@
 
     <ImageView
         android:id="@+id/background_profile"
-        android:src="@drawable/background_profile_jpg"
+        android:src="@drawable/background_profile"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

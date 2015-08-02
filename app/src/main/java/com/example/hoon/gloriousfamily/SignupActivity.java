@@ -3,6 +3,7 @@ package com.example.hoon.gloriousfamily;
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.*;
 import android.widget.ImageView;
 
@@ -25,18 +26,47 @@ public class SignupActivity extends Activity {
     @ViewById(R.id.button_login)
     ImageView buttonLogin;
 
-    @ViewById(R.id.background_signup) ImageView backgroundSignUp;
-
     @AfterViews
     protected void init() {
         // Lock rotation.
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        // Load images.
         Glide.with(getApplicationContext()).load(R.drawable.button_facebook).into(buttonFacebook);
         Glide.with(getApplicationContext()).load(R.drawable.layer_facebook);
         Glide.with(getApplicationContext()).load(R.drawable.button_login);
 
         // XXX : Global Image Cache.
+        // TODO : Must be called at first activity !
         this.cache();
+    }
+
+    @Background
+    void cache(){
+        // Background images.
+        Glide.with(getApplicationContext()).load(R.drawable.background_profile);
+        Glide.with(getApplicationContext()).load(R.drawable.background_charselect);
+        Glide.with(getApplicationContext()).load(R.drawable.background_birth);
+        Glide.with(getApplicationContext()).load(R.drawable.background_death);
+        Glide.with(getApplicationContext()).load(R.drawable.background_family_tree);
+        Glide.with(getApplicationContext()).load(R.drawable.background_mate_select);
+        Glide.with(getApplicationContext()).load(R.drawable.background_home_tent);
+
+        // Button images.
+        Glide.with(getApplicationContext()).load(R.drawable.button_getstarted);
+        Glide.with(getApplicationContext()).load(R.drawable.button_findyourmate);
+        Glide.with(getApplicationContext()).load(R.drawable.button_profile);
+        Glide.with(getApplicationContext()).load(R.drawable.button_familytree);
+        Glide.with(getApplicationContext()).load(R.drawable.button_yesitisme);
+
+        // Layer images.
+        Glide.with(getApplicationContext()).load(R.drawable.layer_banner);
+
+        // Character images.
+        Glide.with(getApplicationContext()).load(R.drawable.character_body_one);
+        Glide.with(getApplicationContext()).load(R.drawable.character_color_one);
+        Glide.with(getApplicationContext()).load(R.drawable.character_face_one);
+        Glide.with(getApplicationContext()).load(R.drawable.character_cloth_one);
     }
 
     @Click(R.id.button_facebook)
@@ -46,7 +76,8 @@ public class SignupActivity extends Activity {
         layerFacebook.setVisibility(View.VISIBLE);
         Glide.with(getApplicationContext()).load(R.drawable.button_login).into(buttonLogin);
         buttonLogin.setVisibility(View.VISIBLE);
-        // 값 입력받는 창
+
+        // TODO : Get input.
     }
 
     @Click(R.id.button_login)
@@ -55,24 +86,5 @@ public class SignupActivity extends Activity {
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         finish();
         System.gc();
-    }
-
-    @Background
-    void cache(){
-        // TODO : [GLOBAL] Replace the background image from png(with alpha) to jpg(without).
-        Glide.with(getApplicationContext()).load(R.drawable.background_profile);
-        Glide.with(getApplicationContext()).load(R.drawable.button_getstarted);
-        Glide.with(getApplicationContext()).load(R.drawable.background_home_tent);
-        Glide.with(getApplicationContext()).load(R.drawable.button_findyourmate);
-        Glide.with(getApplicationContext()).load(R.drawable.character_body_one);
-        Glide.with(getApplicationContext()).load(R.drawable.button_profile);
-        Glide.with(getApplicationContext()).load(R.drawable.button_familytree);
-        Glide.with(getApplicationContext()).load(R.drawable.layer_banner);
-        Glide.with(getApplicationContext()).load(R.drawable.background_charselect);
-        Glide.with(getApplicationContext()).load(R.drawable.button_yesitisme);
-        Glide.with(getApplicationContext()).load(R.drawable.character_body_one);
-        Glide.with(getApplicationContext()).load(R.drawable.character_cloth_one);
-        Glide.with(getApplicationContext()).load(R.drawable.character_color_one);
-        Glide.with(getApplicationContext()).load(R.drawable.character_face_one);
     }
 }

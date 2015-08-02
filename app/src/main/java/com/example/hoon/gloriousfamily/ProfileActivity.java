@@ -15,14 +15,15 @@ import org.androidannotations.annotations.ViewById;
 
 @EActivity(R.layout.activity_profile)
 public class ProfileActivity extends Activity {
-    @ViewById ImageView background_profile;
-    @ViewById ImageView button_getstarted;
+    @ViewById(R.id.button_getstarted)
+    ImageView button_getstarted;
 
     @AfterViews
     protected void init() {
         // Lock rotation.
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        //Glide.with(getApplicationContext()).load(R.drawable.background_profile).into(background_profile);
+
+        // Load image.
         Glide.with(getApplicationContext()).load(R.drawable.button_getstarted).into(button_getstarted);
     }
 
@@ -30,9 +31,7 @@ public class ProfileActivity extends Activity {
     void buttonGetStartedClicked() {
         CharacterSelectActivity_.intent(this).start();
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-        // TODO :
         finish();
         System.gc();
-        //onStop();
     }
 }
