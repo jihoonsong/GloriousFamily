@@ -2,8 +2,6 @@ package com.example.hoon.gloriousfamily;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
-import android.os.Bundle;
-import android.view.*;
 
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.AfterViews;

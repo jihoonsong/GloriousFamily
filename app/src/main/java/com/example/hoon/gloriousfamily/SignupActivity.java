@@ -2,8 +2,6 @@ package com.example.hoon.gloriousfamily;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.*;
 import android.widget.ImageView;
 
@@ -37,12 +35,12 @@ public class SignupActivity extends Activity {
         Glide.with(getApplicationContext()).load(R.drawable.button_login);
 
         // XXX : Global Image Cache.
-        // TODO : Must be called at first activity !
+        // XXX : Must be called at first activity !
         this.cache();
     }
 
     @Background
-    void cache(){
+    void cache() {
         // Background images.
         Glide.with(getApplicationContext()).load(R.drawable.background_profile);
         Glide.with(getApplicationContext()).load(R.drawable.background_charselect);
