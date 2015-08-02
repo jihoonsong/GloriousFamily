@@ -7,7 +7,6 @@ import android.view.*;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.squareup.picasso.Picasso;
 
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.Click;
