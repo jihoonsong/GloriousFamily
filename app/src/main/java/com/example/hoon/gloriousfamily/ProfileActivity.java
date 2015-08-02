@@ -16,7 +16,7 @@ import org.androidannotations.annotations.ViewById;
 @EActivity(R.layout.activity_profile)
 public class ProfileActivity extends Activity {
     @ViewById(R.id.button_getstarted)
-    ImageView button_getstarted;
+    ImageView buttonGetstarted;
 
     @AfterViews
     protected void init() {
@@ -24,7 +24,7 @@ public class ProfileActivity extends Activity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         // Load image.
-        Glide.with(getApplicationContext()).load(R.drawable.button_getstarted).into(button_getstarted);
+        Glide.with(getApplicationContext()).load(R.drawable.button_getstarted).into(buttonGetstarted);
     }
 
     @Click(R.id.button_getstarted)

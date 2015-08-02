@@ -16,19 +16,19 @@ import org.androidannotations.annotations.ViewById;
 @EActivity(R.layout.activity_character_select)
 public class CharacterSelectActivity extends Activity{
     @ViewById(R.id.button_yesitisme)
-    ImageView button_yesitisme;
+    ImageView buttonYesItIsMe;
 
     @ViewById(R.id.character_body_one)
-    ImageView character_body_one;
+    ImageView characterBodyOne;
 
     @ViewById(R.id.character_color_one)
-    ImageView character_color_one;
+    ImageView characterColorOne;
 
     @ViewById(R.id.character_face_one)
-    ImageView character_face_one;
+    ImageView characterFaceOne;
 
     @ViewById(R.id.character_cloth_one)
-    ImageView character_cloth_one;
+    ImageView characterClothOne;
 
     @AfterViews
     protected void init() {
@@ -36,11 +36,11 @@ public class CharacterSelectActivity extends Activity{
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         // Load images.
-        Glide.with(getApplicationContext()).load(R.drawable.button_yesitisme).into(button_yesitisme);
-        Glide.with(getApplicationContext()).load(R.drawable.character_body_one).into(character_body_one);
-        Glide.with(getApplicationContext()).load(R.drawable.character_color_one).into(character_color_one);
-        Glide.with(getApplicationContext()).load(R.drawable.character_face_one).into(character_face_one);
-        Glide.with(getApplicationContext()).load(R.drawable.character_cloth_one).into(character_cloth_one);
+        Glide.with(getApplicationContext()).load(R.drawable.button_yesitisme).into(buttonYesItIsMe);
+        Glide.with(getApplicationContext()).load(R.drawable.character_body_one).into(characterBodyOne);
+        Glide.with(getApplicationContext()).load(R.drawable.character_color_one).into(characterColorOne);
+        Glide.with(getApplicationContext()).load(R.drawable.character_face_one).into(characterFaceOne);
+        Glide.with(getApplicationContext()).load(R.drawable.character_cloth_one).into(characterClothOne);
     }
 
     @Click(R.id.button_yesitisme)

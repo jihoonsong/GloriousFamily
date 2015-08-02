@@ -16,19 +16,19 @@ import org.androidannotations.annotations.ViewById;
 @EActivity(R.layout.activity_home)
 public class HomeActivity extends Activity {
     @ViewById(R.id.button_findyourmate)
-    ImageView button_findyourmate;
+    ImageView buttonFindyourmate;
 
     @ViewById(R.id.layer_banner)
-    ImageView layer_banner;
+    ImageView layerBanner;
 
     @ViewById(R.id.button_profile)
-    ImageView button_profile;
+    ImageView buttonProfile;
 
     @ViewById(R.id.button_familytree)
-    ImageView button_familytree;
+    ImageView buttonFamilytree;
 
     @ViewById(R.id.character_body_one)
-    ImageView character_body_one;
+    ImageView characterBodyOne;
 
     @AfterViews
     protected void init() {
@@ -36,11 +36,11 @@ public class HomeActivity extends Activity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         // Load images.
-        Glide.with(getApplicationContext()).load(R.drawable.button_findyourmate).into(button_findyourmate);
-        Glide.with(getApplicationContext()).load(R.drawable.layer_banner).into(layer_banner);
-        Glide.with(getApplicationContext()).load(R.drawable.button_profile).into(button_profile);
-        Glide.with(getApplicationContext()).load(R.drawable.button_familytree).into(button_familytree);
-        Glide.with(getApplicationContext()).load(R.drawable.character_body_one).into(character_body_one);
+        Glide.with(getApplicationContext()).load(R.drawable.button_findyourmate).into(buttonFindyourmate);
+        Glide.with(getApplicationContext()).load(R.drawable.layer_banner).into(layerBanner);
+        Glide.with(getApplicationContext()).load(R.drawable.button_profile).into(buttonProfile);
+        Glide.with(getApplicationContext()).load(R.drawable.button_familytree).into(buttonFamilytree);
+        Glide.with(getApplicationContext()).load(R.drawable.character_body_one).into(characterBodyOne);
     }
 
     @Click(R.id.button_profile)
