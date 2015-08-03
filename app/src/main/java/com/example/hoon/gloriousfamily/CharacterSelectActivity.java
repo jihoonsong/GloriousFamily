@@ -2,7 +2,9 @@ package com.example.hoon.gloriousfamily;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
+import android.graphics.Typeface;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
@@ -15,6 +17,9 @@ import org.androidannotations.annotations.ViewById;
 public class CharacterSelectActivity extends Activity{
     @ViewById(R.id.button_yesitisme)
     ImageView buttonYesItIsMe;
+
+    @ViewById(R.id.text_yesitisme)
+    TextView textYesItIsMe;
 
     @ViewById(R.id.character_body_one)
     ImageView characterBodyOne;
@@ -39,6 +44,9 @@ public class CharacterSelectActivity extends Activity{
         Glide.with(getApplicationContext()).load(R.drawable.character_color_one).into(characterColorOne);
         Glide.with(getApplicationContext()).load(R.drawable.character_face_one).into(characterFaceOne);
         Glide.with(getApplicationContext()).load(R.drawable.character_cloth_one).into(characterClothOne);
+
+        // Set font type.
+        textYesItIsMe.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
     }
 
     @Click(R.id.button_yesitisme)

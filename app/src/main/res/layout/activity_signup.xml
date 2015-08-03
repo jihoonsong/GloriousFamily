@@ -10,6 +10,7 @@ android:layout_height="match_parent" tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/button_facebook"
+        android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:layout_height="77dp"
         android:layout_alignParentBottom="true"
@@ -18,6 +19,7 @@ android:layout_height="match_parent" tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/layer_facebook"
+        android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:layout_alignParentBottom="true"

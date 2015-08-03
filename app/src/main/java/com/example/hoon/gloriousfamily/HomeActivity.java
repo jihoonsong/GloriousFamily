@@ -2,7 +2,9 @@ package com.example.hoon.gloriousfamily;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
+import android.graphics.Typeface;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
@@ -25,6 +27,15 @@ public class HomeActivity extends Activity {
     @ViewById(R.id.button_familytree)
     ImageView buttonFamilytree;
 
+    @ViewById(R.id.text_findyourmate)
+    TextView textFindYourMate;
+
+    @ViewById(R.id.text_startofthefamily)
+    TextView textStartOfTheFamily;
+
+    @ViewById(R.id.text_generation)
+    TextView textGeneration;
+
     @ViewById(R.id.character_body_one)
     ImageView characterBodyOne;
 
@@ -39,6 +50,11 @@ public class HomeActivity extends Activity {
         Glide.with(getApplicationContext()).load(R.drawable.button_profile).into(buttonProfile);
         Glide.with(getApplicationContext()).load(R.drawable.button_familytree).into(buttonFamilytree);
         Glide.with(getApplicationContext()).load(R.drawable.character_body_one).into(characterBodyOne);
+
+        // Set font type.
+        textFindYourMate.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
+        textStartOfTheFamily.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
+        textGeneration.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
     }
 
     @Click(R.id.button_profile)
