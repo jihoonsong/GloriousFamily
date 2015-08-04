@@ -16,7 +16,7 @@ import org.androidannotations.annotations.ViewById;
 @EActivity(R.layout.activity_home)
 public class HomeActivity extends Activity {
     @ViewById(R.id.button_findyourmate)
-    ImageView buttonFindyourmate;
+    ImageView buttonFindYourMate;
 
     @ViewById(R.id.layer_banner)
     ImageView layerBanner;
@@ -25,7 +25,7 @@ public class HomeActivity extends Activity {
     ImageView buttonProfile;
 
     @ViewById(R.id.button_familytree)
-    ImageView buttonFamilytree;
+    ImageView buttonFamilyTree;
 
     @ViewById(R.id.text_findyourmate)
     TextView textFindYourMate;
@@ -45,10 +45,10 @@ public class HomeActivity extends Activity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         // Load images.
-        Glide.with(getApplicationContext()).load(R.drawable.button_findyourmate).into(buttonFindyourmate);
+        Glide.with(getApplicationContext()).load(R.drawable.button_findyourmate).into(buttonFindYourMate);
         Glide.with(getApplicationContext()).load(R.drawable.layer_banner).into(layerBanner);
         Glide.with(getApplicationContext()).load(R.drawable.button_profile).into(buttonProfile);
-        Glide.with(getApplicationContext()).load(R.drawable.button_familytree).into(buttonFamilytree);
+        Glide.with(getApplicationContext()).load(R.drawable.button_familytree).into(buttonFamilyTree);
         Glide.with(getApplicationContext()).load(R.drawable.character_body_one).into(characterBodyOne);
 
         // Set font type.
