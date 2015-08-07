@@ -8,9 +8,9 @@ import org.androidannotations.annotations.AfterViews;
 
 @EActivity(R.layout.activity_mate_select)
 public class MateSelectActivity extends Activity {
-    @AfterViews
-    protected void init() {
-        // Lock rotation.
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-    }
+  @AfterViews
+  protected void init() {
+    // Lock rotation.
+    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+  }
 }

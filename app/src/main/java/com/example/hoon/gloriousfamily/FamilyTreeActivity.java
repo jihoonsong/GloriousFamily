@@ -8,9 +8,9 @@ import org.androidannotations.annotations.EActivity;
 
 @EActivity(R.layout.activity_family_tree)
 public class FamilyTreeActivity extends Activity {
-    @AfterViews
-    protected void init() {
-        // Lock rotation.
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-    }
+  @AfterViews
+  protected void init() {
+    // Lock rotation.
+    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+  }
 }

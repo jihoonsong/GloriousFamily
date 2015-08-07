@@ -14,46 +14,46 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.ViewById;
 
 @EActivity(R.layout.activity_character_select)
-public class CharacterSelectActivity extends Activity{
-    @ViewById(R.id.button_yesitisme)
-    ImageView buttonYesItIsMe;
+public class CharacterSelectActivity extends Activity {
+  @ViewById(R.id.button_yesitisme)
+  ImageView buttonYesItIsMe;
 
-    @ViewById(R.id.text_yesitisme)
-    TextView textYesItIsMe;
+  @ViewById(R.id.text_yesitisme)
+  TextView textYesItIsMe;
 
-    @ViewById(R.id.character_body_one)
-    ImageView characterBodyOne;
+  @ViewById(R.id.character_body_one)
+  ImageView characterBodyOne;
 
-    @ViewById(R.id.character_color_one)
-    ImageView characterColorOne;
+  @ViewById(R.id.character_color_one)
+  ImageView characterColorOne;
 
-    @ViewById(R.id.character_face_one)
-    ImageView characterFaceOne;
+  @ViewById(R.id.character_face_one)
+  ImageView characterFaceOne;
 
-    @ViewById(R.id.character_cloth_one)
-    ImageView characterClothOne;
+  @ViewById(R.id.character_cloth_one)
+  ImageView characterClothOne;
 
-    @AfterViews
-    protected void init() {
-        // Lock rotation.
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+  @AfterViews
+  protected void init() {
+    // Lock rotation.
+    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        // Load images.
-        Glide.with(getApplicationContext()).load(R.drawable.button_yesitisme).into(buttonYesItIsMe);
-        Glide.with(getApplicationContext()).load(R.drawable.character_body_one).into(characterBodyOne);
-        Glide.with(getApplicationContext()).load(R.drawable.character_color_one).into(characterColorOne);
-        Glide.with(getApplicationContext()).load(R.drawable.character_face_one).into(characterFaceOne);
-        Glide.with(getApplicationContext()).load(R.drawable.character_cloth_one).into(characterClothOne);
+    // Load images.
+    Glide.with(getApplicationContext()).load(R.drawable.button_yesitisme).into(buttonYesItIsMe);
+    Glide.with(getApplicationContext()).load(R.drawable.character_body_one).into(characterBodyOne);
+    Glide.with(getApplicationContext()).load(R.drawable.character_color_one).into(characterColorOne);
+    Glide.with(getApplicationContext()).load(R.drawable.character_face_one).into(characterFaceOne);
+    Glide.with(getApplicationContext()).load(R.drawable.character_cloth_one).into(characterClothOne);
 
-        // Set font type.
-        textYesItIsMe.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
-    }
+    // Set font type.
+    textYesItIsMe.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
+  }
 
-    @Click(R.id.button_yesitisme)
-    void buttonYesItIsMeClicked() {
-        HomeActivity_.intent(this).start();
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-        finish();
-        System.gc();
-    }
+  @Click(R.id.button_yesitisme)
+  void buttonYesItIsMeClicked() {
+    HomeActivity_.intent(this).start();
+    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+    finish();
+    System.gc();
+  }
 }
