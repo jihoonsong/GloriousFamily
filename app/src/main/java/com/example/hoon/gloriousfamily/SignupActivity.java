@@ -28,7 +28,7 @@ import org.androidannotations.annotations.AfterViews;
 
 @EActivity(R.layout.activity_signup)
 public class SignupActivity extends Activity implements ConnectionCallbacks,
-    OnConnectionFailedListener {
+                                                        OnConnectionFailedListener {
   // XXX : Must be called at first activity !
   private GoogleApiClient mGoogleApiClient = null;
   private static final int REQUEST_RESOLVE_ERROR = 1;
@@ -62,14 +62,13 @@ public class SignupActivity extends Activity implements ConnectionCallbacks,
 
     // Connect to Google fitness.
     // XXX : Must be called at first activity !
-    connectGooglefitnessApiClient();
+    connectGoogleFitnessApiClient();
   }
 
   @Override
   protected void onStop() {
     // Disconnect connection.
-    if (mGoogleApiClient.isConnected())
-      mGoogleApiClient.disconnect();
+    disconnectGoogleFitnessApiClient();
 
     super.onStop();
   }
@@ -115,30 +114,18 @@ public class SignupActivity extends Activity implements ConnectionCallbacks,
         .build();
   }
 
-  void connectGooglefitnessApiClient() {
+  void connectGoogleFitnessApiClient() {
     Log.d(this.toString(), "Connecting.");
     mGoogleApiClient.connect();
   }
 
-  @Click(R.id.button_facebook)
-  void buttonFacebookClicked() {
-    buttonFacebook.setVisibility(View.INVISIBLE);
-    Glide.with(getApplicationContext()).load(R.drawable.layer_facebook).into(layerFacebook);
-    layerFacebook.setVisibility(View.VISIBLE);
-    Glide.with(getApplicationContext()).load(R.drawable.button_login).into(buttonLogin);
-    buttonLogin.setVisibility(View.VISIBLE);
-
-    // TODO : Get input.
+  void disconnectGoogleFitnessApiClient() {
+    Log.d(this.toString(), "Disconnecting.");
+    if (mGoogleApiClient.isConnected())
+      mGoogleApiClient.disconnect();
   }
 
-  @Click(R.id.button_login)
-  void buttonLoginClicked() {
-    ProfileActivity_.intent(this).start();
-    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-    finish();
-    System.gc();
-  }
-
+  @Override
   public void onConnected(Bundle bundle) {
     Log.d(this.toString(), "Connected!");
 
@@ -183,6 +170,25 @@ public class SignupActivity extends Activity implements ConnectionCallbacks,
         }
       }
     }
+  }
+
+  @Click(R.id.button_facebook)
+  void buttonFacebookClicked() {
+    buttonFacebook.setVisibility(View.INVISIBLE);
+    Glide.with(getApplicationContext()).load(R.drawable.layer_facebook).into(layerFacebook);
+    layerFacebook.setVisibility(View.VISIBLE);
+    Glide.with(getApplicationContext()).load(R.drawable.button_login).into(buttonLogin);
+    buttonLogin.setVisibility(View.VISIBLE);
+
+    // TODO : Get input.
+  }
+
+  @Click(R.id.button_login)
+  void buttonLoginClicked() {
+    ProfileActivity_.intent(this).start();
+    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+    finish();
+    System.gc();
   }
 
 }
