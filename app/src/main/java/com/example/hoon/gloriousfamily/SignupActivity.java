@@ -12,23 +12,13 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 
 import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.common.Scopes;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.Scope;
-import com.google.android.gms.common.api.Status;
-import com.google.android.gms.common.api.PendingResult;
-import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.fitness.Fitness;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
-import com.google.android.gms.fitness.Fitness;
-import com.google.android.gms.fitness.FitnessStatusCodes;
-import com.google.android.gms.fitness.data.Field;
-import com.google.android.gms.fitness.data.DataSet;
-import com.google.android.gms.fitness.data.DataType;
-import com.google.android.gms.fitness.data.DataPoint;
-import com.google.android.gms.fitness.result.DataReadResult;
-import com.google.android.gms.fitness.request.DataReadRequest;
+import com.google.android.gms.common.Scopes;
+import com.google.android.gms.common.api.Scope;
+import com.google.android.gms.common.ConnectionResult;
 
 import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.EActivity;
@@ -36,13 +26,9 @@ import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.AfterViews;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
-
 @EActivity(R.layout.activity_signup)
 public class SignupActivity extends Activity implements ConnectionCallbacks,
-    OnConnectionFailedListener {
+                                                        OnConnectionFailedListener {
   // XXX : Must be called at first activity !
   private GoogleApiClient mGoogleApiClient = null;
   private static final int REQUEST_RESOLVE_ERROR = 1;
@@ -118,7 +104,6 @@ public class SignupActivity extends Activity implements ConnectionCallbacks,
   void buildGoogleFitnessApiClient() {
     // TODO : Determine scope types.
     mGoogleApiClient = new GoogleApiClient.Builder(this)
-        .addApi(Fitness.RECORDING_API)
         .addApi(Fitness.HISTORY_API)
         .addScope(new Scope(Scopes.FITNESS_ACTIVITY_READ))
         .addScope(new Scope(Scopes.FITNESS_BODY_READ))
@@ -144,11 +129,7 @@ public class SignupActivity extends Activity implements ConnectionCallbacks,
   public void onConnected(Bundle bundle) {
     Log.d(this.toString(), "Connected!");
 
-    // Create subscription consists of 'DataType.TYPE_STEP_COUNT_DELTA'.
-    subscribe();
-
-    // Fetch steps count from Google Fitness.
-    fetchStepsCount();
+    // TODO : Fetch necessary data.
   }
 
   @Override
@@ -191,58 +172,6 @@ public class SignupActivity extends Activity implements ConnectionCallbacks,
     }
   }
 
-  private void subscribe() {
-    Fitness.RecordingApi.subscribe(mGoogleApiClient, DataType.TYPE_STEP_COUNT_DELTA)
-        .setResultCallback(new ResultCallback<Status>() {
-          @Override
-          public void onResult(Status status) {
-            if (status.isSuccess()) {
-              if (status.getStatusCode() == FitnessStatusCodes.SUCCESS_ALREADY_SUBSCRIBED) {
-                Log.d(this.toString(), "Existing subscription for activity detected.");
-              } else {
-                Log.d(this.toString(), "Successfully subscribed!");
-              }
-            } else {
-              Log.d(this.toString(), "There was a problem subscribing.");
-            }
-          }
-        });
-  }
-
-  @Background
-  public void fetchStepsCount() {
-    Log.d(this.toString(), "Fitness API invoked.");
-
-    // TODO : Store and set dating started time as a startTime, and set current time as a endTime.
-    // Set startTime and endTime.
-    Calendar calendar = Calendar.getInstance();
-    Date now = new Date();
-    calendar.setTime(now);
-    long endTime = calendar.getTimeInMillis();
-    calendar.add(Calendar.HOUR_OF_DAY, -1);
-    long startTime = calendar.getTimeInMillis();
-
-    // Fetch data of steps count from Google Fitness.
-    PendingResult<DataReadResult> pendingResult = Fitness.HistoryApi.readData(
-        mGoogleApiClient,
-        new DataReadRequest.Builder()
-            .read(DataType.TYPE_STEP_COUNT_DELTA)
-            .setTimeRange(startTime, endTime, TimeUnit.MILLISECONDS)
-            .build());
-    DataReadResult readDataResult = pendingResult.await();
-    DataSet dataSet = readDataResult.getDataSet(DataType.TYPE_STEP_COUNT_DELTA);
-
-    // TODO : Locate Google Fitness API at service so that other activities can access to total steps count.
-    // Calculate steps count from the fetch data.
-    int stepsCount = 0;
-    for (DataPoint dp : dataSet.getDataPoints()) {
-      for (Field field : dp.getDataType().getFields()) {
-        stepsCount = stepsCount + dp.getValue(field).asInt();
-      }
-    }
-    Log.d(this.toString(), "Total steps count: " + stepsCount);
-  }
-
   @Click(R.id.button_facebook)
   void buttonFacebookClicked() {
     buttonFacebook.setVisibility(View.INVISIBLE);
@@ -261,4 +190,5 @@ public class SignupActivity extends Activity implements ConnectionCallbacks,
     finish();
     System.gc();
   }
+
 }
