@@ -40,7 +40,7 @@ public class SignupActivity extends Activity {
   }
 
   @Background
-  void cache() {
+  protected void cache() {
     // Background images.
     Glide.with(getApplicationContext()).load(R.drawable.background_profile);
     Glide.with(getApplicationContext()).load(R.drawable.background_charselect);
@@ -68,7 +68,7 @@ public class SignupActivity extends Activity {
   }
 
   @Click(R.id.button_facebook)
-  void buttonFacebookClicked() {
+  protected void buttonFacebookClicked() {
     buttonFacebook.setVisibility(View.INVISIBLE);
     Glide.with(getApplicationContext()).load(R.drawable.layer_facebook).into(layerFacebook);
     layerFacebook.setVisibility(View.VISIBLE);
@@ -79,7 +79,7 @@ public class SignupActivity extends Activity {
   }
 
   @Click(R.id.button_login)
-  void buttonLoginClicked() {
+  protected void buttonLoginClicked() {
     ProfileActivity_.intent(this).start();
     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     finish();

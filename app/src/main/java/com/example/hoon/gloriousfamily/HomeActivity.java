@@ -58,18 +58,18 @@ public class HomeActivity extends Activity {
   }
 
   @Click(R.id.button_profile)
-  void buttonProfileClicked() {
+  protected void buttonProfileClicked() {
     ProfileActivity_.intent(this).start();
   }
 
   @Click(R.id.button_familytree)
-  void buttonFamilyTreeClicked() {
+  protected void buttonFamilyTreeClicked() {
     FamilyTreeActivity_.intent(this).start();
     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
   }
 
   @Click(R.id.button_findyourmate)
-  void buttonFindYourMateClicked() {
+  protected void buttonFindYourMateClicked() {
     MateSelectActivity_.intent(this).start();
     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
   }

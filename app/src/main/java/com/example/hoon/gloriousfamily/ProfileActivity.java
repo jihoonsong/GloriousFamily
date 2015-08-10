@@ -34,7 +34,7 @@ public class ProfileActivity extends Activity {
   }
 
   @Click(R.id.button_getstarted)
-  void buttonGetStartedClicked() {
+  protected void buttonGetStartedClicked() {
     CharacterSelectActivity_.intent(this).start();
     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     finish();
