@@ -89,7 +89,9 @@ public class SignupActivity extends Activity {
     Glide.with(getApplicationContext()).load(R.drawable.character_body_one);
     Glide.with(getApplicationContext()).load(R.drawable.character_color_one);
     Glide.with(getApplicationContext()).load(R.drawable.character_face_one);
-    Glide.with(getApplicationContext()).load(R.drawable.character_cloth_one);
+    Glide.with(getApplicationContext()).load(R.drawable.character_costume_one);
+
+    // TODO : Cache all images ! (Make sure not to omit.)
   }
 
   @Click(R.id.button_facebook)

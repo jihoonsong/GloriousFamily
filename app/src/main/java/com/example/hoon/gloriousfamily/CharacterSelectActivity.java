@@ -27,11 +27,29 @@ public class CharacterSelectActivity extends Activity {
   @ViewById(R.id.character_color_one)
   ImageView characterColorOne;
 
-  @ViewById(R.id.character_face_one)
-  ImageView characterFaceOne;
+//  @ViewById(R.id.character_face_one)
+//  ImageView characterFaceOne;
+//
+//  @ViewById(R.id.character_costume_one)
+//  ImageView characterCostumeOne;
 
-  @ViewById(R.id.character_cloth_one)
-  ImageView characterClothOne;
+  @ViewById(R.id.character_color_left_arrow)
+  ImageView characterColorLeftArrow;
+
+  @ViewById(R.id.character_color_right_arrow)
+  ImageView characterColorRightArrow;
+
+  @ViewById(R.id.character_face_left_arrow)
+  ImageView characterFaceLeftArrow;
+
+  @ViewById(R.id.character_face_right_arrow)
+  ImageView characterFaceRightArrow;
+
+  @ViewById(R.id.character_costume_left_arrow)
+  ImageView characterCostumeLeftArrow;
+
+  @ViewById(R.id.character_costume_right_arrow)
+  ImageView characterCostumeRightArrow;
 
   @AfterViews
   protected void init() {
@@ -42,8 +60,14 @@ public class CharacterSelectActivity extends Activity {
     Glide.with(getApplicationContext()).load(R.drawable.button_yesitisme).into(buttonYesItIsMe);
     Glide.with(getApplicationContext()).load(R.drawable.character_body_one).into(characterBodyOne);
     Glide.with(getApplicationContext()).load(R.drawable.character_color_one).into(characterColorOne);
-    Glide.with(getApplicationContext()).load(R.drawable.character_face_one).into(characterFaceOne);
-    Glide.with(getApplicationContext()).load(R.drawable.character_cloth_one).into(characterClothOne);
+//    Glide.with(getApplicationContext()).load(R.drawable.character_face_one).into(characterFaceOne);
+//    Glide.with(getApplicationContext()).load(R.drawable.character_costume_one).into(characterCostumeOne);
+    Glide.with(getApplicationContext()).load(R.drawable.character_color_left_arrow).into(characterColorLeftArrow);
+    Glide.with(getApplicationContext()).load(R.drawable.character_color_right_arrow).into(characterColorRightArrow);
+    Glide.with(getApplicationContext()).load(R.drawable.character_face_left_arrow).into(characterFaceLeftArrow);
+    Glide.with(getApplicationContext()).load(R.drawable.character_face_right_arrow).into(characterFaceRightArrow);
+    Glide.with(getApplicationContext()).load(R.drawable.character_costume_left_arrow).into(characterCostumeLeftArrow);
+    Glide.with(getApplicationContext()).load(R.drawable.character_costume_right_arrow).into(characterCostumeRightArrow);
 
     // Set font type.
     textYesItIsMe.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
