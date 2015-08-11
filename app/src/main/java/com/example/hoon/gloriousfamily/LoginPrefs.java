@@ -1,7 +1,6 @@
 package com.example.hoon.gloriousfamily;
 
 import org.androidannotations.annotations.sharedpreferences.SharedPref;
-import org.androidannotations.annotations.sharedpreferences.DefaultInt;
 import org.androidannotations.annotations.sharedpreferences.DefaultString;
 
 /**

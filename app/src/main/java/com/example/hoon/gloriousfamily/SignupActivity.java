@@ -1,10 +1,8 @@
 package com.example.hoon.gloriousfamily;
 
 import android.app.Activity;
-import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
-import android.util.Log;
 import android.view.*;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -30,17 +28,17 @@ public class SignupActivity extends Activity {
   @ViewById(R.id.button_login)
   ImageView buttonLogin;
 
-  @ViewById(R.id.edit_email)
-  EditText editEmail;
-
-  @ViewById(R.id.edit_password)
-  EditText editPassword;
-
   @ViewById(R.id.text_email)
   TextView textEmail;
 
+  @ViewById(R.id.edit_email)
+  EditText editEmail;
+
   @ViewById(R.id.text_password)
   TextView textPassword;
+
+  @ViewById(R.id.edit_password)
+  EditText editPassword;
 
   @Pref
   LoginPrefs_ loginPrefs;

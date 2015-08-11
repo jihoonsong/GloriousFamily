@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.util.Log;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.graphics.Typeface;
 
@@ -14,6 +16,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.ViewById;
+import org.androidannotations.annotations.sharedpreferences.Pref;
 
 @EActivity(R.layout.activity_profile)
 public class ProfileActivity extends Activity {
@@ -32,11 +35,17 @@ public class ProfileActivity extends Activity {
   @ViewById(R.id.text_height)
   TextView textHeight;
 
+  @ViewById(R.id.edit_height)
+  EditText editHeight;
+
   @ViewById(R.id.text_cm)
   TextView textCm;
 
   @ViewById(R.id.text_weight)
   TextView textWeight;
+
+  @ViewById(R.id.edit_weight)
+  EditText editWeight;
 
   @ViewById(R.id.text_kg)
   TextView textKg;
@@ -49,6 +58,12 @@ public class ProfileActivity extends Activity {
 
   @ViewById(R.id.text_push_notification)
   TextView textPushNotification;
+
+  @ViewById(R.id.switch_notification)
+  Switch switchNotification;
+
+  @Pref
+  PersonalDataPrefs_ personalDataPrefs;
 
   @AfterViews
   protected void init() {
@@ -73,6 +88,14 @@ public class ProfileActivity extends Activity {
 
   @Click(R.id.button_getstarted)
   protected void buttonGetStartedClicked() {
+    // Store received input.
+    personalDataPrefs.height().put(editHeight.getText().toString());
+    personalDataPrefs.weight().put(editWeight.getText().toString());
+    if(switchNotification.isChecked())
+      personalDataPrefs.notification().put("ON");
+    else
+      personalDataPrefs.notification().put("OFF");
+
     // Swap activity.
     CharacterSelectActivity_.intent(this).start();
     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
