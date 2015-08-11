@@ -29,12 +29,6 @@
         android:textSize="15pt" />
 
     <ImageView
-        android:id="@+id/character_body_one"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true" />
-
-    <ImageView
         android:id="@+id/button_profile"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -88,17 +82,42 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" >
+            android:layout_weight="2.1" >
         </LinearLayout>
 
         <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7" >
+        </LinearLayout>
+
+        <RelativeLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" >
+            android:layout_weight="5.3" >
+
+            <ImageView
+                android:id="@+id/character_body_one"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
+
+            <!--face comes here-->
+
+            <!--costume comes here-->
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.8" >
         </LinearLayout>
 
     </LinearLayout>
