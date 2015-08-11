@@ -1,8 +1,10 @@
 package com.example.hoon.gloriousfamily;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.*;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -101,12 +103,21 @@ public class SignupActivity extends Activity {
     textEmail.setVisibility(View.VISIBLE);
     editPassword.setVisibility(View.VISIBLE);
     textPassword.setVisibility(View.VISIBLE);
-
-    // TODO : Store received input.
   }
 
   @Click(R.id.button_login)
   protected void buttonLoginClicked() {
+    // TODO : Login to facebook.
+
+    // Store received input.
+    SharedPreferences loginPref = getSharedPreferences("LoginPref", 0);
+    SharedPreferences.Editor loginEditor = loginPref.edit();
+
+    loginEditor.putString("Email", editEmail.getText().toString());
+    loginEditor.putString("Password", editPassword.getText().toString());
+    loginEditor.apply();
+
+    // Swap activity.
     ProfileActivity_.intent(this).start();
     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     finish();

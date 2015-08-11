@@ -1,7 +1,9 @@
 package com.example.hoon.gloriousfamily;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.graphics.Typeface;
@@ -35,6 +37,7 @@ public class ProfileActivity extends Activity {
 
   @Click(R.id.button_getstarted)
   protected void buttonGetStartedClicked() {
+    // Swap activity.
     CharacterSelectActivity_.intent(this).start();
     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     finish();

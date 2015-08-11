@@ -51,7 +51,7 @@ public class HomeActivity extends Activity {
     Glide.with(getApplicationContext()).load(R.drawable.button_familytree).into(buttonFamilyTree);
     Glide.with(getApplicationContext()).load(R.drawable.character_body_one).into(characterBodyOne);
 
-    // Set font type.
+    // Set fonts type.
     textFindYourMate.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
     textStartOfTheFamily.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
     textGeneration.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
@@ -59,17 +59,21 @@ public class HomeActivity extends Activity {
 
   @Click(R.id.button_profile)
   protected void buttonProfileClicked() {
+    // Swap activity.
     ProfileActivity_.intent(this).start();
+    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
   }
 
   @Click(R.id.button_familytree)
   protected void buttonFamilyTreeClicked() {
+    // Swap activity.
     FamilyTreeActivity_.intent(this).start();
     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
   }
 
   @Click(R.id.button_findyourmate)
   protected void buttonFindYourMateClicked() {
+    // Swap activity.
     MateSelectActivity_.intent(this).start();
     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
   }

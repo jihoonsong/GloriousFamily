@@ -51,6 +51,7 @@ public class CharacterSelectActivity extends Activity {
 
   @Click(R.id.button_yesitisme)
   protected void buttonYesItIsMeClicked() {
+    // Swap activity.
     HomeActivity_.intent(this).start();
     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     finish();
