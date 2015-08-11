@@ -27,11 +27,80 @@ android:layout_height="match_parent" tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/button_login"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="210dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="15dp"
         android:visibility="invisible"
         android:clickable="true" />
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="160dp"
+        android:maxLength="50"
+        android:inputType="textEmailAddress"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="105dp"
+        android:maxLength="50"
+        android:inputType="textPassword"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/text_email_box"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="160dp" />
+
+    <TextView
+        android:id="@+id/text_email"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/text_email_box"
+        android:layout_alignLeft="@id/text_email_box"
+        android:layout_alignBottom="@id/text_email_box"
+        android:gravity="center_vertical"
+        android:text="Email"
+        android:textSize="9pt"
+        android:textColor="#71A4A3"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/text_password_box"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="105dp" />
+
+    <TextView
+        android:id="@+id/text_password"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/text_password_box"
+        android:layout_alignLeft="@id/text_password_box"
+        android:layout_alignBottom="@id/text_password_box"
+        android:gravity="center_vertical"
+        android:text="Password"
+        android:textSize="9pt"
+        android:textColor="#71A4A3"
+        android:visibility="invisible" />
 
 </RelativeLayout>

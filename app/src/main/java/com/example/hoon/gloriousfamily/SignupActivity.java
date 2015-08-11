@@ -2,8 +2,11 @@ package com.example.hoon.gloriousfamily;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
+import android.graphics.Typeface;
 import android.view.*;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
@@ -24,6 +27,18 @@ public class SignupActivity extends Activity {
   @ViewById(R.id.button_login)
   ImageView buttonLogin;
 
+  @ViewById(R.id.edit_email)
+  EditText editEmail;
+
+  @ViewById(R.id.edit_password)
+  EditText editPassword;
+
+  @ViewById(R.id.text_email)
+  TextView textEmail;
+
+  @ViewById(R.id.text_password)
+  TextView textPassword;
+
   @AfterViews
   protected void init() {
     // Lock rotation.
@@ -37,6 +52,10 @@ public class SignupActivity extends Activity {
     // XXX : Global Image Cache.
     // XXX : Must be called at first activity !
     this.cache();
+
+    // Set fonts type.
+    textEmail.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
+    textPassword.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
   }
 
   @Background
@@ -69,13 +88,21 @@ public class SignupActivity extends Activity {
 
   @Click(R.id.button_facebook)
   protected void buttonFacebookClicked() {
+    // Set sign up element invisible.
     buttonFacebook.setVisibility(View.INVISIBLE);
+
+    // Set login elements visible.
     Glide.with(getApplicationContext()).load(R.drawable.layer_facebook).into(layerFacebook);
     layerFacebook.setVisibility(View.VISIBLE);
     Glide.with(getApplicationContext()).load(R.drawable.button_login).into(buttonLogin);
     buttonLogin.setVisibility(View.VISIBLE);
 
-    // TODO : Get input.
+    editEmail.setVisibility(View.VISIBLE);
+    textEmail.setVisibility(View.VISIBLE);
+    editPassword.setVisibility(View.VISIBLE);
+    textPassword.setVisibility(View.VISIBLE);
+
+    // TODO : Store received input.
   }
 
   @Click(R.id.button_login)

@@ -25,8 +25,8 @@
         android:layout_alignBottom="@id/button_getstarted"
         android:gravity="center"
         android:text="Get Started!"
-        android:textColor="#ffffff"
-        android:textSize="15pt" />
+        android:textSize="15pt"
+        android:textColor="#ffffff" />
 
     <LinearLayout
         android:orientation="vertical"
