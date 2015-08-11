@@ -23,6 +23,33 @@ public class ProfileActivity extends Activity {
   @ViewById(R.id.text_getstarted)
   TextView textGetStarted;
 
+  @ViewById(R.id.text_goal)
+  TextView textGoal;
+
+  @ViewById(R.id.text_basic_information)
+  TextView textBasicInformation;
+
+  @ViewById(R.id.text_height)
+  TextView textHeight;
+
+  @ViewById(R.id.text_cm)
+  TextView textCm;
+
+  @ViewById(R.id.text_weight)
+  TextView textWeight;
+
+  @ViewById(R.id.text_kg)
+  TextView textKg;
+
+  @ViewById(R.id.text_gender)
+  TextView textGender;
+
+  @ViewById(R.id.text_notify)
+  TextView textNotify;
+
+  @ViewById(R.id.text_push_notification)
+  TextView textPushNotification;
+
   @AfterViews
   protected void init() {
     // Lock rotation.
@@ -33,6 +60,15 @@ public class ProfileActivity extends Activity {
 
     // Set font type.
     textGetStarted.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
+    textGoal.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
+    textBasicInformation.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
+    textHeight.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_LIGHT.ttf"));
+    textCm.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_LIGHT.ttf"));
+    textWeight.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_LIGHT.ttf"));
+    textKg.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_LIGHT.ttf"));
+    textGender.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_LIGHT.ttf"));
+    textNotify.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
+    textPushNotification.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_LIGHT.ttf"));
   }
 
   @Click(R.id.button_getstarted)
