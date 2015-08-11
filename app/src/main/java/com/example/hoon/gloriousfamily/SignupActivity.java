@@ -17,6 +17,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.sharedpreferences.Pref;
 
 @EActivity(R.layout.activity_signup)
 public class SignupActivity extends Activity {
@@ -40,6 +41,9 @@ public class SignupActivity extends Activity {
 
   @ViewById(R.id.text_password)
   TextView textPassword;
+
+  @Pref
+  LoginPrefs_ loginPrefs;
 
   @AfterViews
   protected void init() {
@@ -110,12 +114,8 @@ public class SignupActivity extends Activity {
     // TODO : Login to facebook.
 
     // Store received input.
-    SharedPreferences loginPref = getSharedPreferences("LoginPref", 0);
-    SharedPreferences.Editor loginEditor = loginPref.edit();
-
-    loginEditor.putString("Email", editEmail.getText().toString());
-    loginEditor.putString("Password", editPassword.getText().toString());
-    loginEditor.apply();
+    loginPrefs.email().put(editEmail.getText().toString());
+    loginPrefs.password().put(editPassword.getText().toString());
 
     // Swap activity.
     ProfileActivity_.intent(this).start();
