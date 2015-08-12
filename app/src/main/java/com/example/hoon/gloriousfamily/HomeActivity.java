@@ -9,9 +9,9 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.Click;
-import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.ViewById;
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 
 @EActivity(R.layout.activity_home)
 public class HomeActivity extends Activity {

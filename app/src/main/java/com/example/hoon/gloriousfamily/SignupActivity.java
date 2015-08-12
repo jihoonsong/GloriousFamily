@@ -10,11 +10,11 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.ViewById;
-import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.sharedpreferences.Pref;
 
 @EActivity(R.layout.activity_signup)

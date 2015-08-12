@@ -3,8 +3,8 @@ package com.example.hoon.gloriousfamily;
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 
-import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.AfterViews;
 
 @EActivity(R.layout.activity_family_tree)
 public class FamilyTreeActivity extends Activity {

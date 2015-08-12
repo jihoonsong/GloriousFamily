@@ -1,7 +1,7 @@
 package com.example.hoon.gloriousfamily;
 
-/**
- * Created by HooN on 2015. 8. 11..
- */
+import org.androidannotations.annotations.sharedpreferences.SharedPref;
+
+@SharedPref
 public interface CharacterPrefs {
 }

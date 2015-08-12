@@ -1,11 +1,7 @@
 package com.example.hoon.gloriousfamily;
 
-import org.androidannotations.annotations.sharedpreferences.DefaultString;
 import org.androidannotations.annotations.sharedpreferences.SharedPref;
-
-/**
- * Created by HooN on 2015. 8. 11..
- */
+import org.androidannotations.annotations.sharedpreferences.DefaultString;
 
 @SharedPref
 public interface PersonalDataPrefs {

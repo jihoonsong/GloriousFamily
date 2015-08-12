@@ -1,9 +1,7 @@
 package com.example.hoon.gloriousfamily;
 
 import android.app.Activity;
-import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
-import android.util.Log;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Switch;
@@ -13,9 +11,9 @@ import android.graphics.Typeface;
 import com.bumptech.glide.Glide;
 
 import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.ViewById;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.sharedpreferences.Pref;
 
 @EActivity(R.layout.activity_profile)
