@@ -2,43 +2,222 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/background_dating"
-        android:src="@drawable/background_dating"
-        android:scaleType="centerCrop"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1" >
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/background_dating_left"
+                android:src="@drawable/background_dating_tent"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.3" >
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5" >
+
+                    <ImageView
+                        android:id="@+id/layer_heart_left"
+                        android:src="@drawable/layer_heart90"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3" >
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/character_body_left"
+                        android:src="@drawable/character_body_red"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" />
+
+                    <!--face comes here-->
+
+                    <!--costume comes here-->
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" >
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01"
+            android:background="#ffffff">
         </LinearLayout>
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1" >
-
-        <LinearLayout
+        <RelativeLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
             android:layout_weight="1" >
-        </LinearLayout>
 
+            <ImageView
+                android:id="@+id/background_dating_right"
+                android:src="@drawable/background_dating_castle"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.3" >
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5" >
+
+                    <ImageView
+                        android:id="@+id/layer_heart_right"
+                        android:src="@drawable/layer_heart70"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3" >
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/character_body_right"
+                        android:src="@drawable/character_body_green"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" />
+
+                    <!--face comes here-->
+
+                    <!--costume comes here-->
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/layer_banner"
+        android:layout_width="300dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/text_startofthefamily"
+        android:layout_width="185dp"
+        android:layout_height="90dp"
+        android:layout_alignTop="@id/layer_banner"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"
+        android:text="Start Of the Family"
+        android:textColor="#000000"
+        android:textSize="10pt" />
+
+    <TextView
+        android:id="@+id/text_generation"
+        android:layout_width="140dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@id/layer_banner"
+        android:layout_centerHorizontal="true"
+        android:text="-1st Generation-"
+        android:textColor="#000000"
+        android:textSize="8pt" />
+
+    <ImageView
+        android:id="@+id/button_profile"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/button_familytree"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/text_d_day"
+        android:layout_width="71dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:text="D - 1"
+        android:textColor="#000000"
+        android:textSize="13pt" />
 
 </RelativeLayout>

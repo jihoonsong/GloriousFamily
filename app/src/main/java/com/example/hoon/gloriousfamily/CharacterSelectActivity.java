@@ -21,11 +21,11 @@ public class CharacterSelectActivity extends Activity {
   @ViewById(R.id.text_yesitisme)
   TextView textYesItIsMe;
 
-  @ViewById(R.id.character_body_one)
-  ImageView characterBodyOne;
+  @ViewById(R.id.character_body)
+  ImageView characterBody;
 
-  @ViewById(R.id.character_color_one)
-  ImageView characterColorOne;
+  @ViewById(R.id.character_color)
+  ImageView characterColor;
 
 //  @ViewById(R.id.character_face_one)
 //  ImageView characterFaceOne;
@@ -33,23 +33,23 @@ public class CharacterSelectActivity extends Activity {
 //  @ViewById(R.id.character_costume_one)
 //  ImageView characterCostumeOne;
 
-  @ViewById(R.id.character_color_left_arrow)
-  ImageView characterColorLeftArrow;
+  @ViewById(R.id.character_left_arrow_color)
+  ImageView characterLeftArrowColor;
 
-  @ViewById(R.id.character_color_right_arrow)
-  ImageView characterColorRightArrow;
+  @ViewById(R.id.character_right_arrow_color)
+  ImageView characterRightArrowColor;
 
-  @ViewById(R.id.character_face_left_arrow)
-  ImageView characterFaceLeftArrow;
+  @ViewById(R.id.character_left_arrow_face)
+  ImageView characterLeftArrowFace;
 
-  @ViewById(R.id.character_face_right_arrow)
-  ImageView characterFaceRightArrow;
+  @ViewById(R.id.character_right_arrow_face)
+  ImageView characterRightArrowFace;
 
-  @ViewById(R.id.character_costume_left_arrow)
-  ImageView characterCostumeLeftArrow;
+  @ViewById(R.id.character_left_arrow_costume)
+  ImageView characterLeftArrowCostume;
 
-  @ViewById(R.id.character_costume_right_arrow)
-  ImageView characterCostumeRightArrow;
+  @ViewById(R.id.character_right_arrow_costume)
+  ImageView characterRightArrowCostume;
 
   @AfterViews
   protected void init() {
@@ -58,16 +58,16 @@ public class CharacterSelectActivity extends Activity {
 
     // Load images.
     Glide.with(getApplicationContext()).load(R.drawable.button_yesitisme).into(buttonYesItIsMe);
-    Glide.with(getApplicationContext()).load(R.drawable.character_body_one).into(characterBodyOne);
-    Glide.with(getApplicationContext()).load(R.drawable.character_color_one).into(characterColorOne);
+    Glide.with(getApplicationContext()).load(R.drawable.character_body_red).into(characterBody);
+    Glide.with(getApplicationContext()).load(R.drawable.character_color_red).into(characterColor);
 //    Glide.with(getApplicationContext()).load(R.drawable.character_face_one).into(characterFaceOne);
 //    Glide.with(getApplicationContext()).load(R.drawable.character_costume_one).into(characterCostumeOne);
-    Glide.with(getApplicationContext()).load(R.drawable.character_color_left_arrow).into(characterColorLeftArrow);
-    Glide.with(getApplicationContext()).load(R.drawable.character_color_right_arrow).into(characterColorRightArrow);
-    Glide.with(getApplicationContext()).load(R.drawable.character_face_left_arrow).into(characterFaceLeftArrow);
-    Glide.with(getApplicationContext()).load(R.drawable.character_face_right_arrow).into(characterFaceRightArrow);
-    Glide.with(getApplicationContext()).load(R.drawable.character_costume_left_arrow).into(characterCostumeLeftArrow);
-    Glide.with(getApplicationContext()).load(R.drawable.character_costume_right_arrow).into(characterCostumeRightArrow);
+    Glide.with(getApplicationContext()).load(R.drawable.character_left_arrow_color).into(characterLeftArrowColor);
+    Glide.with(getApplicationContext()).load(R.drawable.character_right_arrow_color).into(characterRightArrowColor);
+    Glide.with(getApplicationContext()).load(R.drawable.character_left_arrow_face).into(characterLeftArrowFace);
+    Glide.with(getApplicationContext()).load(R.drawable.character_right_arrow_face).into(characterRightArrowFace);
+    Glide.with(getApplicationContext()).load(R.drawable.character_left_arrow_costume).into(characterLeftArrowCostume);
+    Glide.with(getApplicationContext()).load(R.drawable.character_right_arrow_costume).into(characterRightArrowCostume);
 
     // Set font type.
     textYesItIsMe.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));

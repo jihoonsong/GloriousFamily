@@ -36,8 +36,8 @@ public class HomeActivity extends Activity {
   @ViewById(R.id.text_generation)
   TextView textGeneration;
 
-  @ViewById(R.id.character_body_one)
-  ImageView characterBodyOne;
+  @ViewById(R.id.character_body)
+  ImageView characterBody;
 
   @AfterViews
   protected void init() {
@@ -49,7 +49,7 @@ public class HomeActivity extends Activity {
     Glide.with(getApplicationContext()).load(R.drawable.layer_banner).into(layerBanner);
     Glide.with(getApplicationContext()).load(R.drawable.button_profile).into(buttonProfile);
     Glide.with(getApplicationContext()).load(R.drawable.button_familytree).into(buttonFamilyTree);
-    Glide.with(getApplicationContext()).load(R.drawable.character_body_one).into(characterBodyOne);
+    Glide.with(getApplicationContext()).load(R.drawable.character_body_red).into(characterBody);
 
     // Set fonts type.
     textFindYourMate.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
@@ -74,7 +74,7 @@ public class HomeActivity extends Activity {
   @Click(R.id.button_findyourmate)
   protected void buttonFindYourMateClicked() {
     // Swap activity.
-    MateSelectActivity_.intent(this).start();
+    DatingActivity_.intent(this).start();
     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
   }
 }

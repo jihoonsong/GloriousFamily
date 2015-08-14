@@ -45,6 +45,8 @@ public class LoadingActivity extends Activity {
     Glide.with(getApplicationContext()).load(R.drawable.background_family_tree);
     Glide.with(getApplicationContext()).load(R.drawable.background_mate_select);
     Glide.with(getApplicationContext()).load(R.drawable.background_home_tent);
+    Glide.with(getApplicationContext()).load(R.drawable.background_dating_tent);
+    Glide.with(getApplicationContext()).load(R.drawable.background_dating_castle);
 
     // Button images.
     Glide.with(getApplicationContext()).load(R.drawable.button_facebook);
@@ -58,18 +60,46 @@ public class LoadingActivity extends Activity {
     // Layer images.
     Glide.with(getApplicationContext()).load(R.drawable.layer_banner);
     Glide.with(getApplicationContext()).load(R.drawable.layer_facebook);
+    Glide.with(getApplicationContext()).load(R.drawable.layer_heart10);
+    Glide.with(getApplicationContext()).load(R.drawable.layer_heart20);
+    Glide.with(getApplicationContext()).load(R.drawable.layer_heart30);
+    Glide.with(getApplicationContext()).load(R.drawable.layer_heart40);
+    Glide.with(getApplicationContext()).load(R.drawable.layer_heart50);
+    Glide.with(getApplicationContext()).load(R.drawable.layer_heart60);
+    Glide.with(getApplicationContext()).load(R.drawable.layer_heart70);
+    Glide.with(getApplicationContext()).load(R.drawable.layer_heart80);
+    Glide.with(getApplicationContext()).load(R.drawable.layer_heart90);
 
     // Character images.
-    Glide.with(getApplicationContext()).load(R.drawable.character_body_one);
-    Glide.with(getApplicationContext()).load(R.drawable.character_color_one);
+    Glide.with(getApplicationContext()).load(R.drawable.character_body_red);
+    Glide.with(getApplicationContext()).load(R.drawable.character_body_green);
+    Glide.with(getApplicationContext()).load(R.drawable.character_body_blue);
+    Glide.with(getApplicationContext()).load(R.drawable.character_body_yellow);
+    Glide.with(getApplicationContext()).load(R.drawable.character_body_white);
+
+    Glide.with(getApplicationContext()).load(R.drawable.character_color_red);
+    Glide.with(getApplicationContext()).load(R.drawable.character_color_green);
+    Glide.with(getApplicationContext()).load(R.drawable.character_color_blue);
+    Glide.with(getApplicationContext()).load(R.drawable.character_color_yellow);
+    Glide.with(getApplicationContext()).load(R.drawable.character_color_white);
+
     Glide.with(getApplicationContext()).load(R.drawable.character_face_one);
+    Glide.with(getApplicationContext()).load(R.drawable.character_face_two);
+    Glide.with(getApplicationContext()).load(R.drawable.character_face_three);
+    Glide.with(getApplicationContext()).load(R.drawable.character_face_four);
+    Glide.with(getApplicationContext()).load(R.drawable.character_face_five);
+
+
     Glide.with(getApplicationContext()).load(R.drawable.character_costume_one);
-    Glide.with(getApplicationContext()).load(R.drawable.character_color_left_arrow);
-    Glide.with(getApplicationContext()).load(R.drawable.character_color_right_arrow);
-    Glide.with(getApplicationContext()).load(R.drawable.character_costume_left_arrow);
-    Glide.with(getApplicationContext()).load(R.drawable.character_costume_right_arrow);
-    Glide.with(getApplicationContext()).load(R.drawable.character_face_left_arrow);
-    Glide.with(getApplicationContext()).load(R.drawable.character_face_right_arrow);
+    Glide.with(getApplicationContext()).load(R.drawable.character_costume_two);
+    Glide.with(getApplicationContext()).load(R.drawable.character_costume_three);
+
+    Glide.with(getApplicationContext()).load(R.drawable.character_left_arrow_face);
+    Glide.with(getApplicationContext()).load(R.drawable.character_left_arrow_color);
+    Glide.with(getApplicationContext()).load(R.drawable.character_left_arrow_costume);
+    Glide.with(getApplicationContext()).load(R.drawable.character_right_arrow_face);
+    Glide.with(getApplicationContext()).load(R.drawable.character_right_arrow_color);
+    Glide.with(getApplicationContext()).load(R.drawable.character_right_arrow_costume);
 
     // TODO : Cache all images ! (Make sure not to omit.)
   }
@@ -80,7 +110,6 @@ public class LoadingActivity extends Activity {
         (loginPrefs.password().get().equals(""))) {
       // User needs to login.
       SignupActivity_.intent(this).start();
-
     } else {
       // User already logged in.
       HomeActivity_.intent(this).start();

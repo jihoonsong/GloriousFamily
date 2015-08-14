@@ -47,20 +47,20 @@
             android:layout_weight="0.8" >
 
             <ImageView
-                android:id="@+id/character_color_one"
+                android:id="@+id/character_color"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal" />
 
             <ImageView
-                android:id="@+id/character_color_left_arrow"
+                android:id="@+id/character_left_arrow_color"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="5dp" />
 
             <ImageView
-                android:id="@+id/character_color_right_arrow"
+                android:id="@+id/character_right_arrow_color"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentRight="true"
@@ -82,7 +82,7 @@
             android:layout_weight="5.3" >
 
             <ImageView
-                android:id="@+id/character_body_one"
+                android:id="@+id/character_body"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true" />
@@ -90,7 +90,7 @@
             <!--face comes here-->
 
             <ImageView
-                android:id="@+id/character_face_left_arrow"
+                android:id="@+id/character_left_arrow_face"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentLeft="true"
@@ -99,7 +99,7 @@
                 android:layout_marginLeft="5dp" />
 
             <ImageView
-                android:id="@+id/character_face_right_arrow"
+                android:id="@+id/character_right_arrow_face"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentRight="true"
@@ -110,7 +110,7 @@
             <!--costume comes here-->
 
             <ImageView
-                android:id="@+id/character_costume_left_arrow"
+                android:id="@+id/character_left_arrow_costume"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentLeft="true"
@@ -119,7 +119,7 @@
                 android:layout_marginLeft="5dp" />
 
             <ImageView
-                android:id="@+id/character_costume_right_arrow"
+                android:id="@+id/character_right_arrow_costume"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_alignParentRight="true"

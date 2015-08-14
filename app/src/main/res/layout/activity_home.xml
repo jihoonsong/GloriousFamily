@@ -102,7 +102,7 @@
             android:layout_weight="5.3" >
 
             <ImageView
-                android:id="@+id/character_body_one"
+                android:id="@+id/character_body"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true" />
