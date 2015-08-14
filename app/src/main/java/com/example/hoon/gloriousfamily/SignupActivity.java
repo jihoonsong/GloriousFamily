@@ -11,7 +11,6 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -53,43 +52,9 @@ public class SignupActivity extends Activity {
     Glide.with(getApplicationContext()).load(R.drawable.layer_facebook);
     Glide.with(getApplicationContext()).load(R.drawable.button_login);
 
-    // XXX : Global Image Cache.
-    // XXX : Must be called at first activity !
-    this.cache();
-
     // Set fonts type.
     textEmail.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
     textPassword.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
-  }
-
-  @Background
-  protected void cache() {
-    // Background images.
-    Glide.with(getApplicationContext()).load(R.drawable.background_profile);
-    Glide.with(getApplicationContext()).load(R.drawable.background_charselect);
-    Glide.with(getApplicationContext()).load(R.drawable.background_birth);
-    Glide.with(getApplicationContext()).load(R.drawable.background_death);
-    Glide.with(getApplicationContext()).load(R.drawable.background_family_tree);
-    Glide.with(getApplicationContext()).load(R.drawable.background_mate_select);
-    Glide.with(getApplicationContext()).load(R.drawable.background_home_tent);
-
-    // Button images.
-    Glide.with(getApplicationContext()).load(R.drawable.button_getstarted);
-    Glide.with(getApplicationContext()).load(R.drawable.button_findyourmate);
-    Glide.with(getApplicationContext()).load(R.drawable.button_profile);
-    Glide.with(getApplicationContext()).load(R.drawable.button_familytree);
-    Glide.with(getApplicationContext()).load(R.drawable.button_yesitisme);
-
-    // Layer images.
-    Glide.with(getApplicationContext()).load(R.drawable.layer_banner);
-
-    // Character images.
-    Glide.with(getApplicationContext()).load(R.drawable.character_body_one);
-    Glide.with(getApplicationContext()).load(R.drawable.character_color_one);
-    Glide.with(getApplicationContext()).load(R.drawable.character_face_one);
-    Glide.with(getApplicationContext()).load(R.drawable.character_costume_one);
-
-    // TODO : Cache all images ! (Make sure not to omit.)
   }
 
   @Click(R.id.button_facebook)
