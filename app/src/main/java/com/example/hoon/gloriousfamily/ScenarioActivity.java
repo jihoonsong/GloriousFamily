@@ -117,9 +117,9 @@ public class ScenarioActivity extends Activity {
     Glide.with(getApplicationContext()).load(R.drawable.layer_indicator).into(layerIndicator);
 
     // Load circles.
-    Glide.with(getApplicationContext()).load(R.drawable.layer_circle_blue_left).into(layerCircleBlueLeft);
-    Glide.with(getApplicationContext()).load(R.drawable.layer_circle_white_center).into(layerCircleWhiteCenter);
-    Glide.with(getApplicationContext()).load(R.drawable.layer_circle_white_right).into(layerCircleWhiteRight);
+    Glide.with(getApplicationContext()).load(R.drawable.layer_circle_blue).into(layerCircleBlueLeft);
+    Glide.with(getApplicationContext()).load(R.drawable.layer_circle_white).into(layerCircleWhiteCenter);
+    Glide.with(getApplicationContext()).load(R.drawable.layer_circle_white).into(layerCircleWhiteRight);
 
     // Load banner.
     Glide.with(getApplicationContext()).load(R.drawable.layer_banner).into(layerBanner);
@@ -161,9 +161,9 @@ public class ScenarioActivity extends Activity {
     mHandler.postDelayed(new Runnable() {
       public void run() {
         layerCircleBlueLeft.setVisibility(View.INVISIBLE);
-        Glide.with(getApplicationContext()).load(R.drawable.layer_circle_white_left).into(layerCircleWhiteLeft);
+        Glide.with(getApplicationContext()).load(R.drawable.layer_circle_white).into(layerCircleWhiteLeft);
         layerCircleWhiteCenter.setVisibility(View.INVISIBLE);
-        Glide.with(getApplicationContext()).load(R.drawable.layer_circle_blue_center).into(layerCircleBlueCenter);
+        Glide.with(getApplicationContext()).load(R.drawable.layer_circle_blue).into(layerCircleBlueCenter);
       }
     }, 1500);
 
@@ -172,7 +172,7 @@ public class ScenarioActivity extends Activity {
         layerCircleBlueCenter.setVisibility(View.INVISIBLE);
         layerCircleWhiteCenter.setVisibility(View.VISIBLE);
         layerCircleWhiteRight.setVisibility(View.INVISIBLE);
-        Glide.with(getApplicationContext()).load(R.drawable.layer_circle_blue_right).into(layerCircleBlueRight);
+        Glide.with(getApplicationContext()).load(R.drawable.layer_circle_blue).into(layerCircleBlueRight);
       }
     }, 2500);
 

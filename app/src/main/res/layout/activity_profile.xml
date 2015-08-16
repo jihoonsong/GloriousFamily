@@ -75,7 +75,7 @@
 
             <ImageView
                 android:id="@+id/button_user_male_unselected"
-                android:src="@drawable/button_user_male_unselected"
+                android:src="@drawable/button_unselected"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="55dp"
@@ -83,7 +83,7 @@
 
             <ImageView
                 android:id="@+id/button_user_male_selected"
-                android:src="@drawable/button_user_male_selected"
+                android:src="@drawable/button_selected"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="55dp"
@@ -103,7 +103,7 @@
 
             <ImageView
                 android:id="@+id/button_user_female_selected"
-                android:src="@drawable/button_user_female_selected"
+                android:src="@drawable/button_selected"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_toRightOf="@+id/text_user_male"
@@ -112,7 +112,7 @@
 
             <ImageView
                 android:id="@+id/button_user_female_unselected"
-                android:src="@drawable/button_user_female_unselected"
+                android:src="@drawable/button_unselected"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_toRightOf="@+id/text_user_male"
@@ -182,7 +182,7 @@
 
             <ImageView
                 android:id="@+id/button_character_male_unselected"
-                android:src="@drawable/button_character_male_unselected"
+                android:src="@drawable/button_unselected"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="55dp"
@@ -191,7 +191,7 @@
 
             <ImageView
                 android:id="@+id/button_character_male_selected"
-                android:src="@drawable/button_character_male_selected"
+                android:src="@drawable/button_selected"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="55dp"
@@ -213,7 +213,7 @@
 
             <ImageView
                 android:id="@+id/button_character_female_selected"
-                android:src="@drawable/button_character_female_selected"
+                android:src="@drawable/button_selected"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_toRightOf="@+id/text_character_male"
@@ -223,7 +223,7 @@
 
             <ImageView
                 android:id="@+id/button_character_female_unselected"
-                android:src="@drawable/button_character_female_unselected"
+                android:src="@drawable/button_unselected"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_toRightOf="@+id/text_character_male"
