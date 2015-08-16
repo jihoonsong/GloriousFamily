@@ -2,7 +2,6 @@ package com.example.hoon.gloriousfamily;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
-import android.media.Image;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;

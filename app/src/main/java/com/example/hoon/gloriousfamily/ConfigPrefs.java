@@ -7,4 +7,16 @@ import org.androidannotations.annotations.sharedpreferences.DefaultString;
 public interface ConfigPrefs {
   @DefaultString("")
   String Mode();
+
+  @DefaultString("")
+  String UserName();
+
+  @DefaultString("")
+  String UserGender();
+
+  @DefaultString("")
+  String CharacterName();
+
+  @DefaultString("")
+  String CharacterGender();
 }
