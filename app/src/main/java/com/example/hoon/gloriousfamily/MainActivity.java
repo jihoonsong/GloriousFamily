@@ -74,17 +74,17 @@ public class MainActivity extends Activity {
       // Swap to HomeActivity.
       HomeActivity_.intent(this).start();
     }
-    else if(startFlagsPrefs.isProfile().get()) {
+    else if(startFlagsPrefs.isCharacterSelect().get()) {
       // Swap to ScenarioActivity.
       ScenarioActivity_.intent(this).start();
     }
-    else if(startFlagsPrefs.isCharacterSelect().get()) {
-      // Swap to ProfileActivity.
-      ProfileActivity_.intent(this).start();
-    }
-    else if(startFlagsPrefs.isModeSelect().get()) {
+    else if(startFlagsPrefs.isProfile().get()) {
       // Swap to CharacterSelectActivity.
       CharacterSelectActivity_.intent(this).start();
+    }
+    else if(startFlagsPrefs.isModeSelect().get()) {
+      // Swap to ProfileActivity.
+      ProfileActivity_.intent(this).start();
     }
     else {
       // Swap to ModeSelectActivity.
