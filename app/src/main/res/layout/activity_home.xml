@@ -1,7 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-</LinearLayout>
+    <ImageView
+        android:src="@drawable/background_home"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/layer_indicator"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/text_indicator"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:textColor="#5D5D5D"
+        android:textSize="7.2pt"/>
+
+    <TextView
+        android:id="@+id/text_character_match"
+        android:layout_width="230dp"
+        android:layout_height="60dp"
+        android:layout_toLeftOf="@+id/character_match"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:gravity="right"
+        android:textColor="#5D5D5D"
+        android:textSize="11pt"/>
+
+    <ImageView
+        android:id="@+id/character_match"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="15dp"/>
+
+    <ImageView
+        android:id="@+id/layer_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/layer_indicator"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:id="@+id/text_banner"
+        android:layout_width="230dp"
+        android:layout_height="48dp"
+        android:layout_alignBottom="@id/layer_banner"
+        android:layout_marginBottom="16dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="#5D5D5D"
+        android:textSize="10pt" />
+
+    <ImageView
+        android:id="@+id/character_red"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/character_green"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/character_blue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/costume_bokhak"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/costume_intern"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/costume_kinder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--TODO : Message ballon-->
+
+    <!--TODO : ~를 얻기 위한 ~와의 경쟁/협력-->
+
+    <!--TODO : Steps count from Google fit-->
+
+</RelativeLayout>
