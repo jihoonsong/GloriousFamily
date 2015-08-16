@@ -57,15 +57,15 @@ public class ModeSelectActivity extends Activity {
     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
     // Load images.
+    Glide.with(getApplicationContext()).load(R.drawable.button_a_selected);
+    Glide.with(getApplicationContext()).load(R.drawable.button_b_selected);
+    Glide.with(getApplicationContext()).load(R.drawable.button_c_selected);
+    Glide.with(getApplicationContext()).load(R.drawable.button_d_selected);
     Glide.with(getApplicationContext()).load(R.drawable.button_confirm).into(buttonConfirm);
     Glide.with(getApplicationContext()).load(R.drawable.button_a_unselected).into(buttonAUnselected);
-    Glide.with(getApplicationContext()).load(R.drawable.button_a_selected);
     Glide.with(getApplicationContext()).load(R.drawable.button_b_unselected).into(buttonBUnselected);
-    Glide.with(getApplicationContext()).load(R.drawable.button_b_selected);
     Glide.with(getApplicationContext()).load(R.drawable.button_c_unselected).into(buttonCUnselected);
-    Glide.with(getApplicationContext()).load(R.drawable.button_c_selected);
     Glide.with(getApplicationContext()).load(R.drawable.button_d_unselected).into(buttonDUnselected);
-    Glide.with(getApplicationContext()).load(R.drawable.button_d_selected);
   }
 
   @Click(R.id.button_a_unselected)

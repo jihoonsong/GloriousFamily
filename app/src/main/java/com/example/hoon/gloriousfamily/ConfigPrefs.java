@@ -19,4 +19,10 @@ public interface ConfigPrefs {
 
   @DefaultString("")
   String CharacterGender();
+
+  @DefaultString("")
+  String Costume();
+
+  @DefaultString("")
+  String Color();
 }

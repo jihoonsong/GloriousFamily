@@ -5,7 +5,6 @@
               android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/background_mode_select"
         android:src="@drawable/background_mode_select"
         android:scaleType="centerCrop"
         android:layout_width="match_parent"

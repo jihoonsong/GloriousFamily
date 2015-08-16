@@ -9,10 +9,10 @@ public interface StartFlagsPrefs {
   boolean isScenario();
 
   @DefaultBoolean(false)
-  boolean isProfile();
+  boolean isCharacterSelect();
 
   @DefaultBoolean(false)
-  boolean isCharacterSelect();
+  boolean isProfile();
 
   @DefaultBoolean(false)
   boolean isModeSelect();

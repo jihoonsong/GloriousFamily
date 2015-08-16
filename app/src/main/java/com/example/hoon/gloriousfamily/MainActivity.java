@@ -21,10 +21,6 @@ public class MainActivity extends Activity {
     // Lock rotation.
     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-    // XXX : Global Image Cache.
-    // XXX : Must be called at first activity !
-    this.cache();
-
     // Wait 1200 milliseconds and check start flags.
     Handler mHandler = new Handler();
     mHandler.postDelayed(new Runnable() {
@@ -32,31 +28,6 @@ public class MainActivity extends Activity {
         CheckStartFlags();
       }
     }, 2300);
-  }
-
-  @Background
-  protected void cache() {
-    // TODO : Cache all images ! (Make sure not to omit.)
-
-    // Background images.
-    Glide.with(getApplicationContext()).load(R.drawable.background_main);
-    Glide.with(getApplicationContext()).load(R.drawable.background_profile);
-    Glide.with(getApplicationContext()).load(R.drawable.background_home);
-    Glide.with(getApplicationContext()).load(R.drawable.background_mode_select);
-
-    // Button images.
-    Glide.with(getApplicationContext()).load(R.drawable.button_confirm);
-    Glide.with(getApplicationContext()).load(R.drawable.button_a_unselected);
-    Glide.with(getApplicationContext()).load(R.drawable.button_a_selected);
-    Glide.with(getApplicationContext()).load(R.drawable.button_b_unselected);
-    Glide.with(getApplicationContext()).load(R.drawable.button_b_selected);
-    Glide.with(getApplicationContext()).load(R.drawable.button_c_unselected);
-    Glide.with(getApplicationContext()).load(R.drawable.button_c_selected);
-    Glide.with(getApplicationContext()).load(R.drawable.button_d_unselected);
-    Glide.with(getApplicationContext()).load(R.drawable.button_d_selected);
-
-    // Layer images.
-    Glide.with(getApplicationContext()).load(R.drawable.layer_banner);
   }
 
   private void CheckStartFlags() {
