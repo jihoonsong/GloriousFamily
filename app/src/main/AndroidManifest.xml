@@ -10,7 +10,7 @@
         android:screenOrientation="portrait"
         android:largeHeap="true">
         <activity
-            android:name=".LoadingActivity_"
+            android:name=".MainActivity_"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,15 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignupActivity_" android:label="SignupActivity" />
+        <activity android:name=".ModeSelectActivity_" android:label="ModeSelectActivity" />
         <activity android:name=".ProfileActivity_" android:label="ProfileActivity" />
-        <activity android:name=".CharacterSelectActivity_" android:label="CharacterSelectActivity" />
+        <activity android:name=".ScenarioActivity_" android:label="ScenarioActivity" />
         <activity android:name=".HomeActivity_" android:label="HomeActivity" />
-        <activity android:name=".MateSelectActivity_" android:label="MateSelectActivity" />
-        <activity android:name=".FamilyTreeActivity_" android:label="FamilyTreeActivity" />
-        <activity android:name=".BirthActivity_" android:label="BirthActivity" />
-        <activity android:name=".DeathActivity_" android:label="DeathActivity" />
-        <activity android:name=".DatingActivity_" android:label="DatingActivity" />
     </application>
 
 </manifest>
