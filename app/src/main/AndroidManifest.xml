@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ModeSelectActivity_" android:label="ModeSelectActivity" />
+        <activity android:name=".CharacterSelectActivity_" android:label="CharacterSelectActivity" />
         <activity android:name=".ProfileActivity_" android:label="ProfileActivity" />
         <activity android:name=".ScenarioActivity_" android:label="ScenarioActivity" />
         <activity android:name=".HomeActivity_" android:label="HomeActivity" />
