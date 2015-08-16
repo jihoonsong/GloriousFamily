@@ -73,33 +73,64 @@
                 android:textColor="#5D5D5D"
                 android:textSize="8pt"/>
 
-            <RadioGroup
-                android:id="@+id/user_gender"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="45dp"
-                android:layout_marginLeft="25dp"
-                android:orientation="horizontal"
-                android:checkedButton="@+id/user_male">
+            <ImageView
+                android:id="@+id/button_user_male_unselected"
+                android:src="@drawable/button_user_male_unselected"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="25dp"/>
 
-                <RadioButton
-                    android:id="@+id/user_male"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="Male"
-                    android:textColor="#5D5D5D"
-                    android:textSize="8pt"/>
+            <ImageView
+                android:id="@+id/button_user_male_selected"
+                android:src="@drawable/button_user_male_selected"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="25dp"/>
 
-                <RadioButton
-                    android:id="@+id/user_female"
-                    android:layout_width="120dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="25dp"
-                    android:text="Female"
-                    android:textColor="#5D5D5D"
-                    android:textSize="8pt"/>
+            <TextView
+                android:id="@+id/text_user_male"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/button_user_male_unselected"
+                android:layout_marginTop="48dp"
+                android:layout_marginLeft="7dp"
+                android:gravity="center"
+                android:text="Male"
+                android:textColor="#5D5D5D"
+                android:textSize="7pt"/>
 
-            </RadioGroup>
+            <ImageView
+                android:id="@+id/button_user_female_selected"
+                android:src="@drawable/button_user_female_selected"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/text_user_male"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="35dp"/>
+
+            <ImageView
+                android:id="@+id/button_user_female_unselected"
+                android:src="@drawable/button_user_female_unselected"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/text_user_male"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="35dp"/>
+
+            <TextView
+                android:id="@+id/text_user_female"
+                android:layout_width="55dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/button_user_female_selected"
+                android:layout_marginTop="48dp"
+                android:layout_marginLeft="7dp"
+                android:gravity="center"
+                android:text="Female"
+                android:textColor="#5D5D5D"
+                android:textSize="7pt"/>
+
 
         </RelativeLayout>
 
@@ -116,7 +147,8 @@
                 android:layout_marginLeft="30dp"
                 android:text="What is your character's name?"
                 android:textColor="#5D5D5D"
-                android:textSize="8pt"/>
+                android:textSize="8pt"
+                android:visibility="invisible"/>
 
             <EditText
                 android:id="@+id/edit_character_name"
@@ -127,7 +159,8 @@
                 android:maxLength="9"
                 android:inputType="textPersonName"
                 android:textColor="#5D5D5D"
-                android:textSize="6pt"/>
+                android:textSize="6pt"
+                android:visibility="invisible"/>
 
         </RelativeLayout>
 
@@ -144,35 +177,72 @@
                 android:layout_marginLeft="30dp"
                 android:text="What is your character's gender?"
                 android:textColor="#5D5D5D"
-                android:textSize="8pt"/>
+                android:textSize="8pt"
+                android:visibility="invisible"/>
 
-            <RadioGroup
-                android:id="@+id/character_gender"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="45dp"
+            <ImageView
+                android:id="@+id/button_character_male_unselected"
+                android:src="@drawable/button_character_male_unselected"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="55dp"
                 android:layout_marginLeft="25dp"
-                android:orientation="horizontal"
-                android:checkedButton="@+id/character_male">
+                android:visibility="invisible"/>
 
-                <RadioButton
-                    android:id="@+id/character_male"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="Male"
-                    android:textColor="#5D5D5D"
-                    android:textSize="8pt"/>
+            <ImageView
+                android:id="@+id/button_character_male_selected"
+                android:src="@drawable/button_character_male_selected"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="25dp"
+                android:visibility="invisible"/>
 
-                <RadioButton
-                    android:id="@+id/character_female"
-                    android:layout_width="120dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="25dp"
-                    android:text="Female"
-                    android:textColor="#5D5D5D"
-                    android:textSize="8pt"/>
+            <TextView
+                android:id="@+id/text_character_male"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/button_character_male_selected"
+                android:layout_marginTop="48dp"
+                android:layout_marginLeft="7dp"
+                android:gravity="center"
+                android:text="Male"
+                android:textColor="#5D5D5D"
+                android:textSize="7pt"
+                android:visibility="invisible"/>
 
-            </RadioGroup>
+            <ImageView
+                android:id="@+id/button_character_female_selected"
+                android:src="@drawable/button_character_female_selected"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/text_character_male"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="35dp"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/button_character_female_unselected"
+                android:src="@drawable/button_character_female_unselected"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/text_character_male"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="35dp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/text_character_female"
+                android:layout_width="55dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/button_character_female_selected"
+                android:layout_marginTop="48dp"
+                android:layout_marginLeft="7dp"
+                android:gravity="center"
+                android:text="Female"
+                android:textColor="#5D5D5D"
+                android:textSize="7pt"
+                android:visibility="invisible"/>
 
         </RelativeLayout>
 
