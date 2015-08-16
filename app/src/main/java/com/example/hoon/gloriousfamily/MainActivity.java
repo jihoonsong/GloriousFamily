@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
       public void run() {
         CheckStartFlags();
       }
-    }, 2300);
+    }, 2000);
   }
 
   private void CheckStartFlags() {

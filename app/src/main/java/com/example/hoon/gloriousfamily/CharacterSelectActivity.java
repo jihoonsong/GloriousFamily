@@ -142,7 +142,7 @@ public class CharacterSelectActivity extends Activity {
     configPrefs.Costume().put(costume);
     configPrefs.Color().put(color);
 
-    // Set profile flag true.
+    // Set character select flag true.
     startFlagsPrefs.isCharacterSelect().put(true);
 
     // Swap to ScenarioActivity.
