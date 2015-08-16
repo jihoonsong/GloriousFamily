@@ -29,7 +29,7 @@ public class ProfileActivity extends Activity {
     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
     // Load images.
-    Glide.with(getApplicationContext()).load(R.drawable.button_select).into(buttonStart);
+//    Glide.with(getApplicationContext()).load(R.drawable.button_select).into(buttonStart);
   }
 
   @Click(R.id.button_start)

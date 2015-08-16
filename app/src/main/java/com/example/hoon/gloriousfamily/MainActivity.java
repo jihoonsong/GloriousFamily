@@ -18,12 +18,6 @@ import org.androidannotations.annotations.sharedpreferences.Pref;
 
 @EActivity(R.layout.activity_main)
 public class MainActivity extends Activity {
-  @ViewById(R.id.text_loading)
-  TextView textLoading;
-
-  @ViewById(R.id.button_start)
-  ImageView buttonStart;
-
   @Pref
   StartFlagsPrefs_ startFlagsPrefs;
 
@@ -36,19 +30,13 @@ public class MainActivity extends Activity {
     // XXX : Must be called at first activity !
     this.cache();
 
-    // Load images.
-    Glide.with(getApplicationContext()).load(R.drawable.button_start);
-
-    // Wait 1200 milliseconds and set visibility.
+    // Wait 1200 milliseconds and check start flags.
     Handler mHandler = new Handler();
     mHandler.postDelayed(new Runnable() {
       public void run() {
-        // Make loading text invisible  and start button visible.
-        textLoading.setVisibility(View.INVISIBLE);
-        Glide.with(getApplicationContext()).load(R.drawable.button_start).into(buttonStart);
-        buttonStart.setVisibility(View.VISIBLE);
+        CheckStartFlags();
       }
-    }, 1100);
+    }, 2300);
   }
 
   @Background
@@ -62,8 +50,6 @@ public class MainActivity extends Activity {
     Glide.with(getApplicationContext()).load(R.drawable.background_mode_select);
 
     // Button images.
-    Glide.with(getApplicationContext()).load(R.drawable.button_select);
-    Glide.with(getApplicationContext()).load(R.drawable.button_start);
     Glide.with(getApplicationContext()).load(R.drawable.button_confirm);
     Glide.with(getApplicationContext()).load(R.drawable.button_a_unselected);
     Glide.with(getApplicationContext()).load(R.drawable.button_a_selected);
@@ -78,8 +64,7 @@ public class MainActivity extends Activity {
     Glide.with(getApplicationContext()).load(R.drawable.layer_banner);
   }
 
-  @Click(R.id.button_start)
-  protected void buttonStartClicked() {
+  private void CheckStartFlags() {
     if(startFlagsPrefs.isScenario().get()) {
       // Swap to HomeActivity.
       HomeActivity_.intent(this).start();
