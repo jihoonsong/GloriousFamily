@@ -2,8 +2,10 @@ package com.example.hoon.gloriousfamily;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.graphics.Typeface;
@@ -60,6 +62,12 @@ public class ProfileActivity extends Activity {
   @ViewById(R.id.switch_notification)
   Switch switchNotification;
 
+  @ViewById(R.id.spinner_goal)
+  Spinner spinnerGoal;
+
+  @ViewById(R.id.spinner_gender)
+  Spinner spinnerGender;
+
   @Pref
   PersonalDataPrefs_ personalDataPrefs;
 
@@ -71,7 +79,7 @@ public class ProfileActivity extends Activity {
     // Load image.
     Glide.with(getApplicationContext()).load(R.drawable.button_getstarted).into(buttonGetStarted);
 
-    // Set font type.
+    // Set fonts type.
     textGetStarted.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
     textGoal.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
     textBasicInformation.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
@@ -82,6 +90,19 @@ public class ProfileActivity extends Activity {
     textGender.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_LIGHT.ttf"));
     textNotify.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_MEDIUM.ttf"));
     textPushNotification.setTypeface(Typeface.createFromAsset(getAssets(), "ROBOTO_LIGHT.ttf"));
+
+    // Set spinners.
+    ArrayAdapter<CharSequence> arrayGoal = ArrayAdapter.createFromResource(this,
+        R.array.goal,
+        android.R.layout.simple_spinner_item);
+    arrayGoal.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+    spinnerGoal.setAdapter(arrayGoal);
+
+    ArrayAdapter<CharSequence> arrayGender = ArrayAdapter.createFromResource(this,
+        R.array.gender,
+        android.R.layout.simple_spinner_item);
+    arrayGender.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+    spinnerGender.setAdapter(arrayGender);
   }
 
   @Click(R.id.button_getstarted)
@@ -93,6 +114,8 @@ public class ProfileActivity extends Activity {
       personalDataPrefs.notification().put("ON");
     else
       personalDataPrefs.notification().put("OFF");
+
+    // TODO : Store received input of spinner and switch
 
     // Swap activity.
     CharacterSelectActivity_.intent(this).start();
