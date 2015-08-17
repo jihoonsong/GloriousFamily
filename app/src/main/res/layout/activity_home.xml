@@ -28,10 +28,10 @@
         android:textSize="7.2pt"/>
 
     <TextView
-        android:id="@+id/text_character_match"
+        android:id="@+id/text_character_partner"
         android:layout_width="230dp"
         android:layout_height="60dp"
-        android:layout_toLeftOf="@+id/character_match"
+        android:layout_toLeftOf="@+id/character_partner"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
         android:gravity="right"
@@ -39,7 +39,7 @@
         android:textSize="11pt"/>
 
     <ImageView
-        android:id="@+id/character_match"
+        android:id="@+id/character_partner"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_alignParentRight="true"

@@ -87,7 +87,7 @@
         android:layout_marginLeft="30dp"/>
 
     <TextView
-        android:id="@+id/text_find_match"
+        android:id="@+id/text_find_partner"
         android:layout_width="200dp"
         android:layout_height="35dp"
         android:layout_marginLeft="20dp"
@@ -99,7 +99,7 @@
         android:visibility="invisible"/>
 
     <TextView
-        android:id="@+id/text_match_name"
+        android:id="@+id/text_partner_name"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_marginLeft="20dp"
@@ -110,7 +110,7 @@
         android:visibility="invisible"/>
 
     <ImageView
-        android:id="@+id/character_match"
+        android:id="@+id/character_partner"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_alignParentRight="true"

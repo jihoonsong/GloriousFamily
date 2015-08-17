@@ -42,14 +42,14 @@ public class ScenarioActivity extends Activity {
   @ViewById(R.id.layer_circle_white_right)
   ImageView layerCircleWhiteRight;
 
-  @ViewById(R.id.text_find_match)
-  TextView textFindMatch;
+  @ViewById(R.id.text_find_partner)
+  TextView textFindPartner;
 
-  @ViewById(R.id.text_match_name)
-  TextView textMatchName;
+  @ViewById(R.id.text_partner_name)
+  TextView textPartnerName;
 
-  @ViewById(R.id.character_match)
-  ImageView characterMatch;
+  @ViewById(R.id.character_partner)
+  ImageView characterPartner;
 
   @ViewById(R.id.layer_banner)
   ImageView layerBanner;
@@ -99,8 +99,8 @@ public class ScenarioActivity extends Activity {
 
     // Set fonts types.
     textAnalysis.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Regular.otf"));
-    textFindMatch.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Regular.otf"));
-    textMatchName.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Medium.otf"));
+    textFindPartner.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Regular.otf"));
+    textPartnerName.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Medium.otf"));
     textBanner.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Medium.otf"));
 
     // Check mode.
@@ -234,15 +234,15 @@ public class ScenarioActivity extends Activity {
     layerCircleWhiteLeft.setVisibility(View.INVISIBLE);
     layerCircleWhiteCenter.setVisibility(View.INVISIBLE);
     layerCircleBlueRight.setVisibility(View.INVISIBLE);
-    textFindMatch.setVisibility(View.VISIBLE);
+    textFindPartner.setVisibility(View.VISIBLE);
 
     Handler mHandler = new Handler();
     mHandler.postDelayed(new Runnable() {
       public void run() {
-        // TODO : Defining match's name.
-        textMatchName.setText("바둑이");
-        textMatchName.setVisibility(View.VISIBLE);
-        Glide.with(getApplicationContext()).load(R.drawable.character_match).into(characterMatch);
+        // TODO : Defining partner's name.
+        textPartnerName.setText("바둑이");
+        textPartnerName.setVisibility(View.VISIBLE);
+        Glide.with(getApplicationContext()).load(R.drawable.character_partner).into(characterPartner);
       }
     }, 1300);
 

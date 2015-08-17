@@ -185,6 +185,9 @@ public class ProfileActivity extends Activity {
       configPrefs.CharacterGender().put(characterGender);
     }
 
+    // TODO : Set partner's name.
+
+
     // Set profile flag true.
     startFlagsPrefs.isProfile().put(true);
 

@@ -21,11 +21,11 @@ public class HomeActivity extends Activity {
   @ViewById(R.id.text_indicator)
   TextView textIndicator;
 
-  @ViewById(R.id.text_character_match)
-  TextView textCharacterMatch;
+  @ViewById(R.id.text_character_partner)
+  TextView textCharacterPartner;
 
-  @ViewById(R.id.character_match)
-  ImageView characterMatch;
+  @ViewById(R.id.character_partner)
+  ImageView characterPartner;
 
   @ViewById(R.id.layer_banner)
   ImageView layerBanner;
@@ -63,14 +63,14 @@ public class HomeActivity extends Activity {
 
     // Set fonts type.
     textIndicator.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Regular.otf"));
-    textCharacterMatch.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Medium.otf"));
+    textCharacterPartner.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Medium.otf"));
     textBanner.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Medium.otf"));
 
     // Load indicator.
     Glide.with(getApplicationContext()).load(R.drawable.layer_indicator).into(layerIndicator);
 
-    // Load character match.
-    Glide.with(getApplicationContext()).load(R.drawable.character_match).into(characterMatch);
+    // Load character partner.
+    Glide.with(getApplicationContext()).load(R.drawable.character_partner).into(characterPartner);
 
     // Load banner.
     Glide.with(getApplicationContext()).load(R.drawable.layer_banner).into(layerBanner);
@@ -91,8 +91,8 @@ public class HomeActivity extends Activity {
       textBanner.setText(configPrefs.CharacterName().get());
     }
 
-    // TODO : Defining match player's name.
-    //textCharacterMatch.setText();
+    // TODO : Defining partner player's name.
+    //textCharacterPartner.setText();
 
     // Load character.
     String color = configPrefs.Color().get();
