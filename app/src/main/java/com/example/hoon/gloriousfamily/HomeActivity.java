@@ -91,8 +91,11 @@ public class HomeActivity extends Activity {
       textBanner.setText(configPrefs.CharacterName().get());
     }
 
-    // TODO : Defining partner player's name.
-    //textCharacterPartner.setText();
+    if (mode.equals("A") || mode.equals("C")) {
+      textCharacterPartner.setText(configPrefs.PartnerCharacterName().get());
+    } else {
+      textCharacterPartner.setText(configPrefs.PartnerUserName().get());
+    }
 
     // Load character.
     String color = configPrefs.Color().get();

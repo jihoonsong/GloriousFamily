@@ -239,8 +239,11 @@ public class ScenarioActivity extends Activity {
     Handler mHandler = new Handler();
     mHandler.postDelayed(new Runnable() {
       public void run() {
-        // TODO : Defining partner's name.
-        textPartnerName.setText("바둑이");
+        if (mode.equals("A") || mode.equals("C")) {
+          textPartnerName.setText(configPrefs.PartnerCharacterName().get());
+        } else {
+          textPartnerName.setText(configPrefs.PartnerUserName().get());
+        }
         textPartnerName.setVisibility(View.VISIBLE);
         Glide.with(getApplicationContext()).load(R.drawable.character_partner).into(characterPartner);
       }
