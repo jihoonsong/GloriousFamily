@@ -194,15 +194,20 @@ public class ProfileActivity extends Activity {
       partnerNameString = getResources().getStringArray(R.array.partner_user_name);
     }
 
-    // Random is integer between 0 and 38.
-    // XXX : Random must be between 0 and array-length !
-    int random;
+    // Make partner name different from user name or character name.
+    String partnerName;
     do {
-      random = (int) (Math.random() * 100);
-    } while (!((0 <= random) && (random < 39)));
+      // Random is integer between 0 and 38.
+      // XXX : Random must be between 0 and array-length !
+      int random;
+      do {
+        random = (int) (Math.random() * 100);
+      } while (!((0 <= random) && (random < 39)));
 
-    // Get partner's name.
-    String partnerName = partnerNameString[random];
+      // Get partner's name.
+      partnerName = partnerNameString[random];
+    } while(partnerName.equals(configPrefs.UserName().get()) ||
+        partnerName.equals(configPrefs.CharacterName().get()));
 
     // Store partner's name.
     if (mode.equals("A") || mode.equals("C")) {
