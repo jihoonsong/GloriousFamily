@@ -51,6 +51,15 @@ public class HomeActivity extends Activity {
   @ViewById(R.id.character_green)
   ImageView characterGreen;
 
+  @ViewById(R.id.character_goal)
+  ImageView characterGoal;
+
+  @ViewById(R.id.text_goal)
+  TextView textGoal;
+
+  @ViewById(R.id.text_step_count)
+  TextView textStepCount;
+
   @Pref
   ConfigPrefs_ configPrefs;
 
@@ -65,6 +74,8 @@ public class HomeActivity extends Activity {
     textIndicator.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Regular.otf"));
     textCharacterPartner.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Medium.otf"));
     textBanner.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Medium.otf"));
+    textStepCount.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Regular.otf"));
+    textGoal.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Regular.otf"));
 
     // Load indicator.
     Glide.with(getApplicationContext()).load(R.drawable.layer_indicator).into(layerIndicator);
@@ -124,5 +135,34 @@ public class HomeActivity extends Activity {
         Glide.with(getApplicationContext()).load(R.drawable.costume_bokhak).into(costumeBokhak);
         break;
     }
+
+    // Load goal character.
+    if (configPrefs.UserGender().get().equals("MALE")) {
+      Glide.with(getApplicationContext()).load(R.drawable.character_goal_girl).into(characterGoal);
+    } else {
+      Glide.with(getApplicationContext()).load(R.drawable.character_goal_boy).into(characterGoal);
+    }
+
+    // Set goal text.
+    String text = "를 얻기 위한 ";
+    switch (mode) {
+      case "A":
+        text = text + configPrefs.PartnerCharacterName().get() + "와의 협력";
+        break;
+      case "B":
+        text = text + configPrefs.PartnerUserName().get() + "와의 협력";
+        break;
+      case "C":
+        text = text + configPrefs.PartnerCharacterName().get() + "와의 경쟁";
+        break;
+      case "D":
+        text = text + configPrefs.PartnerUserName().get() + "와의 경쟁";
+        break;
+    }
+    textGoal.setText(text);
+
+    // Set steps count text.
+    // TODO : Attach Google fit.
+    //textStepCount.setText();
   }
 }

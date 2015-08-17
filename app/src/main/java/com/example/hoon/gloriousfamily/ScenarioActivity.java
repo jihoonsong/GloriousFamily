@@ -228,13 +228,13 @@ public class ScenarioActivity extends Activity {
 
     mHandler.postDelayed(new Runnable() {
       public void run() {
-        // Find match.
-        findMatch();
+        // Find partner.
+        findPartner();
       }
     }, 7100);
   }
 
-  private void findMatch() {
+  private void findPartner() {
     textAnalysis.setVisibility(View.INVISIBLE);
     layerCircleWhiteLeft.setVisibility(View.INVISIBLE);
     layerCircleWhiteCenter.setVisibility(View.INVISIBLE);
@@ -285,8 +285,8 @@ public class ScenarioActivity extends Activity {
 
   @Click(R.id.button_next)
   protected void buttonNextClicked() {
-    // TODO : Set scenario flag true.
-    //startFlagsPrefs.isScenario().put(true);
+    // Set scenario flag true.
+    startFlagsPrefs.isScenario().put(true);
 
     // Swap to HomeActivity.
     HomeActivity_.intent(this).start();

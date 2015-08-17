@@ -29,7 +29,7 @@
 
     <TextView
         android:id="@+id/text_character_partner"
-        android:layout_width="230dp"
+        android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_toLeftOf="@+id/character_partner"
         android:layout_marginLeft="20dp"
@@ -98,8 +98,63 @@
 
     <!--TODO : Message ballon-->
 
-    <!--TODO : ~를 얻기 위한 ~와의 경쟁/협력-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_alignParentBottom="true">
 
-    <!--TODO : Steps count from Google fit-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/character_goal"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/text_goal"/>
+
+                <TextView
+                    android:id="@+id/text_goal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center"
+                    android:textColor="#25767A"
+                    android:textSize="7.2pt"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_step_count"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:textColor="#464646"
+            android:textSize="7.2pt"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>
