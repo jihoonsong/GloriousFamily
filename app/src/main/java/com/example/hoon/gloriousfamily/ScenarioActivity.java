@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -78,8 +79,11 @@ public class ScenarioActivity extends Activity {
   @ViewById(R.id.layer_scenario)
   ImageView layerScenario;
 
-  @ViewById(R.id.button_prev)
-  ImageView buttonPrev;
+  @ViewById(R.id.scrollview_scenario)
+  ScrollView scrollviewScenario;
+
+  @ViewById(R.id.text_scenario)
+  TextView textScenario;
 
   @ViewById(R.id.button_next)
   ImageView buttonNext;
@@ -102,6 +106,7 @@ public class ScenarioActivity extends Activity {
     textFindPartner.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Regular.otf"));
     textPartnerName.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Medium.otf"));
     textBanner.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Medium.otf"));
+    textScenario.setTypeface(Typeface.createFromAsset(getAssets(), "NotoSansCJKkr_Regular.otf"));
 
     // Check mode.
     mode = configPrefs.Mode().get();
@@ -251,8 +256,28 @@ public class ScenarioActivity extends Activity {
 
     mHandler.postDelayed(new Runnable() {
       public void run() {
-        // TODO : Show scenario.
+        // TODO : Set scenario text corresponding to mode.
+        // textScenario.setText();
+//        String userName = configPrefs.UserName().get();
+//        String characterName = configPrefs.CharacterName().get();
+//        String partnerUserName = configPrefs.PartnerUserName().get();
+//        String partnerCharacterName = configPrefs.PartnerCharacterName().get();
+//        if (mode.equals("A")) {
+//
+//        } else if (mode.equals("B")) {
+//
+//        } else if (mode.equals(("C"))) {
+//
+//        } else {
+//
+//        }
+
+        // Show scenario.
         Glide.with(getApplicationContext()).load(R.drawable.layer_scenario).into(layerScenario);
+        scrollviewScenario.setVisibility(View.VISIBLE);
+        textScenario.setVisibility(View.VISIBLE);
+
+        // Show next button.
         Glide.with(getApplicationContext()).load(R.drawable.button_next).into(buttonNext);
       }
     }, 2300);
@@ -260,10 +285,6 @@ public class ScenarioActivity extends Activity {
 
   @Click(R.id.button_next)
   protected void buttonNextClicked() {
-    Glide.with(getApplicationContext()).load(R.drawable.button_prev).into(buttonPrev);
-
-    // TODO : etc...
-
     // TODO : Set scenario flag true.
     //startFlagsPrefs.isScenario().put(true);
 
