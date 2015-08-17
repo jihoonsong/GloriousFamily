@@ -25,4 +25,10 @@ public interface ConfigPrefs {
 
   @DefaultString("")
   String Color();
+
+  @DefaultString("")
+  String PartnerUserName();
+
+  @DefaultString("")
+  String PartnerCharacterName();
 }

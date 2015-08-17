@@ -96,7 +96,7 @@ public class ProfileActivity extends Activity {
 
     // Check mode.
     mode = configPrefs.Mode().get();
-    if(mode.equals("A") || mode.equals("C")) {
+    if (mode.equals("A") || mode.equals("C")) {
       textCharacterName.setVisibility(View.VISIBLE);
       editCharacterName.setVisibility(View.VISIBLE);
 
@@ -163,15 +163,15 @@ public class ProfileActivity extends Activity {
   protected void buttonGetStartClicked() {
     // Check input validity.
     String userName = editUserName.getText().toString();
-    if(userName.equals("")) {
+    if (userName.equals("")) {
       Toast.makeText(this, "Please write your name.", Toast.LENGTH_SHORT).show();
       return;
     }
 
     String characterName = "";
-    if(mode.equals("A") || mode.equals("C")) {
+    if (mode.equals("A") || mode.equals("C")) {
       characterName = editCharacterName.getText().toString();
-      if(characterName.equals("")) {
+      if (characterName.equals("")) {
         Toast.makeText(this, "Please write your character's name.", Toast.LENGTH_SHORT).show();
         return;
       }
@@ -180,13 +180,36 @@ public class ProfileActivity extends Activity {
     // Store inputs.
     configPrefs.UserName().put(userName);
     configPrefs.UserGender().put(userGender);
-    if(mode.equals("A") || mode.equals("C")) {
+    if (mode.equals("A") || mode.equals("C")) {
       configPrefs.CharacterName().put(characterName);
       configPrefs.CharacterGender().put(characterGender);
     }
 
-    // TODO : Set partner's name.
+    // Set partner's name.
+    // Get partner's name's string array resource.
+    String[] partnerNameString;
+    if (mode.equals("A") || mode.equals("C")) {
+      partnerNameString = getResources().getStringArray(R.array.partner_character_name);
+    } else {
+      partnerNameString = getResources().getStringArray(R.array.partner_user_name);
+    }
 
+    // Random is integer between 0 and 38.
+    // XXX : Random must be between 0 and array-length !
+    int random;
+    do {
+      random = (int) (Math.random() * 100);
+    } while (!((0 <= random) && (random < 39)));
+
+    // Get partner's name.
+    String partnerName = partnerNameString[random];
+
+    // Store partner's name.
+    if (mode.equals("A") || mode.equals("C")) {
+      configPrefs.PartnerCharacterName().put(partnerName);
+    } else {
+      configPrefs.PartnerUserName().put(partnerName);
+    }
 
     // Set profile flag true.
     startFlagsPrefs.isProfile().put(true);
