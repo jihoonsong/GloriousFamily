@@ -57,11 +57,11 @@ public class ModeSelectActivity extends Activity {
     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
     // Load images.
-    Glide.with(getApplicationContext()).load(R.drawable.button_a_selected);
-    Glide.with(getApplicationContext()).load(R.drawable.button_b_selected);
-    Glide.with(getApplicationContext()).load(R.drawable.button_c_selected);
-    Glide.with(getApplicationContext()).load(R.drawable.button_d_selected);
     Glide.with(getApplicationContext()).load(R.drawable.button_confirm).into(buttonConfirm);
+    Glide.with(getApplicationContext()).load(R.drawable.button_a_selected).into(buttonASelected);
+    Glide.with(getApplicationContext()).load(R.drawable.button_b_selected).into(buttonBSelected);
+    Glide.with(getApplicationContext()).load(R.drawable.button_c_selected).into(buttonCSelected);
+    Glide.with(getApplicationContext()).load(R.drawable.button_d_selected).into(buttonDSelected);
     Glide.with(getApplicationContext()).load(R.drawable.button_a_unselected).into(buttonAUnselected);
     Glide.with(getApplicationContext()).load(R.drawable.button_b_unselected).into(buttonBUnselected);
     Glide.with(getApplicationContext()).load(R.drawable.button_c_unselected).into(buttonCUnselected);
@@ -71,41 +71,61 @@ public class ModeSelectActivity extends Activity {
   @Click(R.id.button_a_unselected)
   protected void buttonAUnselectedClicked() {
     mode = "A";
-    Glide.with(getApplicationContext()).load(R.drawable.button_a_selected).into(buttonASelected);
+
     buttonASelected.setVisibility(View.VISIBLE);
     buttonBSelected.setVisibility(View.INVISIBLE);
     buttonCSelected.setVisibility(View.INVISIBLE);
     buttonDSelected.setVisibility(View.INVISIBLE);
+
+    buttonAUnselected.setVisibility(View.INVISIBLE);
+    buttonBUnselected.setVisibility(View.VISIBLE);
+    buttonCUnselected.setVisibility(View.VISIBLE);
+    buttonDUnselected.setVisibility(View.VISIBLE);
   }
 
   @Click(R.id.button_b_unselected)
   protected void buttonBUnselectedClicked() {
     mode = "B";
-    Glide.with(getApplicationContext()).load(R.drawable.button_b_selected).into(buttonBSelected);
+
     buttonBSelected.setVisibility(View.VISIBLE);
     buttonASelected.setVisibility(View.INVISIBLE);
     buttonCSelected.setVisibility(View.INVISIBLE);
     buttonDSelected.setVisibility(View.INVISIBLE);
+
+    buttonBUnselected.setVisibility(View.INVISIBLE);
+    buttonAUnselected.setVisibility(View.VISIBLE);
+    buttonCUnselected.setVisibility(View.VISIBLE);
+    buttonDUnselected.setVisibility(View.VISIBLE);
   }
 
   @Click(R.id.button_c_unselected)
   protected void buttonCUnselectedClicked() {
     mode = "C";
-    Glide.with(getApplicationContext()).load(R.drawable.button_c_selected).into(buttonCSelected);
+
     buttonCSelected.setVisibility(View.VISIBLE);
     buttonASelected.setVisibility(View.INVISIBLE);
     buttonBSelected.setVisibility(View.INVISIBLE);
     buttonDSelected.setVisibility(View.INVISIBLE);
+
+    buttonCUnselected.setVisibility(View.INVISIBLE);
+    buttonAUnselected.setVisibility(View.VISIBLE);
+    buttonBUnselected.setVisibility(View.VISIBLE);
+    buttonDUnselected.setVisibility(View.VISIBLE);
   }
 
   @Click(R.id.button_d_unselected)
   protected void buttonDUnselectedClicked() {
     mode = "D";
-    Glide.with(getApplicationContext()).load(R.drawable.button_d_selected).into(buttonDSelected);
+
     buttonDSelected.setVisibility(View.VISIBLE);
     buttonASelected.setVisibility(View.INVISIBLE);
     buttonBSelected.setVisibility(View.INVISIBLE);
     buttonCSelected.setVisibility(View.INVISIBLE);
+
+    buttonDUnselected.setVisibility(View.INVISIBLE);
+    buttonAUnselected.setVisibility(View.VISIBLE);
+    buttonBUnselected.setVisibility(View.VISIBLE);
+    buttonCUnselected.setVisibility(View.VISIBLE);
   }
 
   @Click(R.id.button_confirm)

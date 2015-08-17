@@ -40,19 +40,19 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:id="@+id/button_a_unselected"
-                    android:layout_width="115dp"
-                    android:layout_height="115dp"
-                    android:layout_alignParentRight="true"
-                    android:clickable="true" />
-
-                <ImageView
                     android:id="@+id/button_a_selected"
                     android:src="@drawable/button_a_selected"
                     android:layout_width="115dp"
                     android:layout_height="115dp"
                     android:layout_alignParentRight="true"
                     android:visibility="invisible"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:id="@+id/button_a_unselected"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_alignParentRight="true"
                     android:clickable="true" />
 
             </RelativeLayout>
@@ -70,18 +70,18 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:id="@+id/button_b_unselected"
-                    android:layout_width="115dp"
-                    android:layout_height="115dp"
-                    android:layout_alignParentLeft="true"
-                    android:clickable="true" />
-
-                <ImageView
                     android:id="@+id/button_b_selected"
                     android:layout_width="115dp"
                     android:layout_height="115dp"
                     android:layout_alignParentLeft="true"
                     android:visibility="invisible"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:id="@+id/button_b_unselected"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_alignParentLeft="true"
                     android:clickable="true" />
 
             </RelativeLayout>
@@ -105,18 +105,18 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:id="@+id/button_c_unselected"
-                    android:layout_width="115dp"
-                    android:layout_height="115dp"
-                    android:layout_alignParentRight="true"
-                    android:clickable="true" />
-
-                <ImageView
                     android:id="@+id/button_c_selected"
                     android:layout_width="115dp"
                     android:layout_height="115dp"
                     android:layout_alignParentRight="true"
                     android:visibility="invisible"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:id="@+id/button_c_unselected"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_alignParentRight="true"
                     android:clickable="true" />
 
             </RelativeLayout>
@@ -134,18 +134,18 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:id="@+id/button_d_unselected"
-                    android:layout_width="115dp"
-                    android:layout_height="115dp"
-                    android:layout_alignParentLeft="true"
-                    android:clickable="true" />
-
-                <ImageView
                     android:id="@+id/button_d_selected"
                     android:layout_width="115dp"
                     android:layout_height="115dp"
                     android:layout_alignParentLeft="true"
                     android:visibility="invisible"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:id="@+id/button_d_unselected"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_alignParentLeft="true"
                     android:clickable="true" />
 
             </RelativeLayout>
